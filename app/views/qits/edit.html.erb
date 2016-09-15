@@ -1,0 +1,52 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <img src="https://www.qwinix.io/wp-content/uploads/2016/05/logo-footer.png" />
+    </div>
+    <ul class="nav navbar-nav">
+      <!-- <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li> -->
+    </ul>
+    <p class="head">QIT Manager</p>
+  </div>
+</nav>
+<div style="text-align:center">
+<h2>Edit Asset Record</h2>
+<br>
+<%= simple_form_for @qit do |form| %>
+<div class="alignment">
+<%= form.input :borrower, label: "Borrower Name" %>
+</div>
+<br>
+<div class="alignment-2">
+<%= form.input :item, label: "Asset Taken" %>
+</div>
+<br>
+<div class="alignment-2a">
+<%= form.input :item_id, label: "Asset Serial#" %>
+</div>
+<br>
+<div class="alignment-3">
+<%= form.input :borrowed_on, label: "Borrowed Date" %>
+</div>
+<br>
+<div class="alignment-3">
+<%= form.input :returned_on, label: "Returned Date" %>
+</div>
+<br>
+<div class="alignment-4">
+<%= form.input :item_status, label: "Status" %>
+</div>
+<br>
+<div class="alignment-5">
+<%= form.input :incharge, label: "Incharge" %>
+</div>
+<br>
+<br>
+<%= form.button :submit, class: 'btn btn-success', value: "Submit" %>
+<br><br>
+<p><%= link_to "Back", qits_path %></p>
+<% end %>
+</div>
