@@ -7,4 +7,9 @@ class Qit < ActiveRecord::Base
   validates :item_status, presence: true
   validates :incharge, presence: true
   validates :issue, presence: true
+  self.per_page = 8
+  def self.search(search)
+    where("item LIKE ?", "%#{search}%")
+  end
+
 end

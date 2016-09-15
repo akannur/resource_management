@@ -2,19 +2,25 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <img src="https://www.qwinix.io/wp-content/uploads/2016/05/logo-footer.png" />
+      <a href="https://www.qwinix.io"><img src="https://www.qwinix.io/wp-content/uploads/2016/05/logo-footer.png" /></a>
     </div>
     <ul class="nav navbar-nav">
-      <!-- <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
-      <li><a href="#">Page 3</a></li> -->
     </ul>
     <p class="head">QIT Manager</p>
   </div>
 </nav>
 <div style="text-align:center">
   <h2>Asset Management</h2>
+  <%= form_tag(qits_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Assets" %>
+  <%= submit_tag "Search" %>
+  <% end %>
+  <% if @qits.present? %>
+  <%= render @qits %>
+  <% else %>
+  <p>There are no assets containing the term(s) <%= params[:search] %>.</p>
+  <% end %>
+
   <table class="table table-bordered">
     <thead>
       <tr>
@@ -54,6 +60,7 @@
         </tbody>
       </table>
       <p><%= link_to "Add Borrower", new_qit_path %></p>
-      <p><%= paginate @qits %></p>
+      <a href="/"><i class="fa fa-refresh" aria-hidden="true" style="color: red"></i></a>
+      <p><%= will_paginate @qits %></p>
     </div>
     <% end %>

@@ -1,7 +1,11 @@
 class QitsController < ApplicationController
   before_filter :authenticate
   def index
-    @qits = Qit.page(params[:page]).per(12)
+    @qits = Qit.paginate(:page => params[:page])
+    if params[:search]
+      @qits = Qit.all
+      @qits = Qit.search(params[:search]).order("created_at DESC").paginate(:page => params[:page])
+    end
   end
 
   def new
@@ -15,7 +19,13 @@ class QitsController < ApplicationController
   def update
     @qit = Qit.find(params[:id])
     if @qit.update_attributes(qit_params)
-      redirect_to qits_path
+      if @qit.item_status == "BORROWED"
+        @qit.returned_on = nil
+        @qit.save!
+        redirect_to qits_path
+      else
+        redirect_to qits_path
+      end
     else
       render :edit
     end
@@ -31,7 +41,6 @@ class QitsController < ApplicationController
       @qit.item_status.upcase!
       @qit.incharge.upcase!
       @qit.issue.upcase!
-      @qit.save
       redirect_to root_path
     else
       render "new"
