@@ -14,11 +14,11 @@
   </div>
 </nav>
 <div style="text-align:center">
-<h2>Asset Management</h2>
+  <h2>Asset Management</h2>
   <table class="table table-bordered">
     <thead>
       <tr>
-        <th id="b">ID</th>
+        <th id="b">Employee ID</th>
         <th id="b">Borrower Name</th>
         <th id="b">Asset Taken</th>
         <th id="b">Asset Serial#</th>
@@ -30,9 +30,9 @@
       </tr>
     </thead>
     <tbody>
-    <% @qits.each do |qit| %>
+      <% @qits.each do |qit| %>
       <tr>
-        <td><%=qit.id %></td>
+        <td><%=qit.borrower_id %></td>
         <td><%=qit.borrower %></td>
         <td><%=qit.item %></td>
         <td><%=qit.item_id %></td>
@@ -41,11 +41,19 @@
         <td><%=qit.item_status %></td>
         <td><%=qit.issue %></td>
         <td><%=qit.incharge %></td>
-      </tr>
+        <td><%= link_to '<i class="fa fa-trash" aria-hidden="true"></i>
+          '.html_safe, qit_path(qit),
+          method: :delete,
+          data: { confirm: 'Are You sure?' } %></td>
+          <td><%= link_to '<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            '.html_safe, edit_qit_path(qit) %></td>
+
+
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <p><%= link_to "Add Borrower", new_qit_path %></p>
+      <p><%= paginate @qits %></p>
+    </div>
     <% end %>
-    </tbody>
-  </table>
-  <p><%= link_to "Add Borrower", new_qit_path %></p>
-  <p><%= paginate @qits %></p>
-</div>
-<% end %>

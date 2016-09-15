@@ -14,9 +14,10 @@
 ActiveRecord::Schema.define(version: 20160915084716) do
 
   create_table "qits", force: :cascade do |t|
+    t.string   "borrower_id"
     t.string   "borrower"
     t.string   "item"
-    t.integer  "item_id"
+    t.string   "item_id"
     t.date     "borrowed_on"
     t.date     "returned_on"
     t.string   "item_status"

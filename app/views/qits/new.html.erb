@@ -9,13 +9,15 @@
       <li><a href="#">Page 2</a></li>
       <li><a href="#">Page 3</a></li> -->
     </ul>
-    <p class="head">QIT Manager</p>
+    <p class="head">QIT Manager- New Record</p>
   </div>
 </nav>
 <div style="text-align:center">
-<h2>Asset Record</h2>
-<br>
 <%= simple_form_for @qit do |form| %>
+<div class="alignment-184">
+<%= form.input :borrower_id, label: "Employee ID" %>
+</div>
+<br>
 <div class="alignment">
 <%= form.input :borrower, label: "Borrower Name" %>
 </div>
@@ -28,24 +30,24 @@
 <%= form.input :item_id, label: "Asset Serial#" %>
 </div>
 <br>
-<div class="alignment-3">
+<div class="alignment-122">
 <%= form.input :borrowed_on, label: "Borrowed Date" %>
 </div>
 <br>
-<div class="alignment-3">
+<div class="alignment-122a">
 <%= form.input :returned_on, label: "Returned Date" %>
 </div>
 <br>
-<div class="alignment-4">
-<%= form.input :item_status, label: "Status" %>
+<div class="alignment-check">
+<label class="required">* Status</label><%= form.select :item_status, [['BORROWED'],['RETURNED']] %>
 </div>
 <br>
 <div class="alignment-2b">
 <%= form.input :issue, label: "Issues" %>
 </div>
 <br>
-<div class="alignment-5">
-<%= form.input :incharge, label: "Incharge", value: "Manjunath Dinka"%>
+<div class="alignment-checka">
+<label class="required">* Incharge</label><%= form.select :incharge, [['MANJUNATH DINKA'],['ANUPAMA']] %>
 </div>
 <br>
 <br>
