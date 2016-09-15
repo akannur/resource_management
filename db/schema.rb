@@ -17,9 +17,10 @@ ActiveRecord::Schema.define(version: 20160915084716) do
     t.string   "borrower"
     t.string   "item"
     t.integer  "item_id"
-    t.datetime "borrowed_on"
-    t.datetime "returned_on"
+    t.date     "borrowed_on"
+    t.date     "returned_on"
     t.string   "item_status"
+    t.string   "issue"
     t.string   "incharge"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false

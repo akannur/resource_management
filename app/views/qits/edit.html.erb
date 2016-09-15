@@ -16,21 +16,6 @@
 <h2>Edit Asset Record</h2>
 <br>
 <%= simple_form_for @qit do |form| %>
-<div class="alignment">
-<%= form.input :borrower, label: "Borrower Name" %>
-</div>
-<br>
-<div class="alignment-2">
-<%= form.input :item, label: "Asset Taken" %>
-</div>
-<br>
-<div class="alignment-2a">
-<%= form.input :item_id, label: "Asset Serial#" %>
-</div>
-<br>
-<div class="alignment-3">
-<%= form.input :borrowed_on, label: "Borrowed Date" %>
-</div>
 <br>
 <div class="alignment-3">
 <%= form.input :returned_on, label: "Returned Date" %>
@@ -40,8 +25,8 @@
 <%= form.input :item_status, label: "Status" %>
 </div>
 <br>
-<div class="alignment-5">
-<%= form.input :incharge, label: "Incharge" %>
+<div class="alignment-2b">
+<%= form.input :issue, label: "Issues" %>
 </div>
 <br>
 <br>

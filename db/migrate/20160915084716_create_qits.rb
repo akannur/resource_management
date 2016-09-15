@@ -4,9 +4,10 @@ class CreateQits < ActiveRecord::Migration
       t.string :borrower
       t.string :item
       t.integer :item_id
-      t.datetime :borrowed_on
-      t.datetime :returned_on
+      t.date :borrowed_on
+      t.date :returned_on
       t.string :item_status
+      t.string :issue
       t.string :incharge
 
       t.timestamps null: false

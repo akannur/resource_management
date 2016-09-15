@@ -1,3 +1,4 @@
+<% if logged_in? %>
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -24,6 +25,7 @@
         <th id="b">Borrowed Date</th>
         <th id="b">Returned Date</th>
         <th id="b">Status</th>
+        <th id="b">Issues</th>
         <th id="b">Incharge</th>
       </tr>
     </thead>
@@ -37,6 +39,7 @@
         <td><%=qit.borrowed_on %></td>
         <td><%=qit.returned_on %></td>
         <td><%=qit.item_status %></td>
+        <td><%=qit.issue %></td>
         <td><%=qit.incharge %></td>
       </tr>
     <% end %>
@@ -45,3 +48,4 @@
   <p><%= link_to "Add Borrower", new_qit_path %></p>
   <p><%= paginate @qits %></p>
 </div>
+<% end %>
