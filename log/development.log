@@ -10454,3 +10454,408 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (2.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateQits (20160915084716)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "qits" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "borrower_id" varchar, "borrower" varchar, "item" varchar, "item_id" varchar, "borrowed_on" date, "returned_on" date, "item_status" varchar, "issue" varchar, "incharge" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160915084716"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for ::1 at 2016-09-16 12:40:10 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QitsController#index as HTML
+Filter chain halted as :authenticate rendered or redirected
+Completed 401 Unauthorized in 32ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-09-16 12:40:17 +0530
+Processing by QitsController#index as HTML
+  [1m[35mQit Load (0.5ms)[0m  SELECT  "qits".* FROM "qits" LIMIT 8 OFFSET 0
+  Rendered qits/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 1118ms (Views: 1057.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-09-16 12:40:18 +0530
+
+
+Started GET "/assets/qit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-16 12:40:18 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-09-16 12:40:19 +0530
+
+
+Started GET "/assets/qit.self-61bff1850cbc6905108d2da451d3b0380b6903bd0cac0cd313076483ea8a0acc.css?body=1" for ::1 at 2016-09-16 12:40:19 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-09-16 12:40:19 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-09-16 12:40:19 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-09-16 12:40:19 +0530
+
+
+Started GET "/qits?utf8=%E2%9C%93&search=a&commit=Search" for ::1 at 2016-09-16 12:40:25 +0530
+Processing by QitsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a", "commit"=>"Search"}
+  [1m[36mQit Load (0.5ms)[0m  [1mSELECT  "qits".* FROM "qits" WHERE (item LIKE '%a%')  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  Rendered qits/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 69ms (Views: 64.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-09-16 12:40:28 +0530
+Processing by QitsController#index as HTML
+  [1m[35mQit Load (0.4ms)[0m  SELECT  "qits".* FROM "qits" LIMIT 8 OFFSET 0
+  Rendered qits/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 87ms (Views: 83.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-09-16 12:40:30 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (1.1ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 8 OFFSET 0[0m
+  Rendered qits/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 88ms (Views: 83.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2016-09-16 12:40:32 +0530
+Processing by QitsController#index as HTML
+  [1m[35mQit Load (0.3ms)[0m  SELECT  "qits".* FROM "qits" LIMIT 8 OFFSET 0
+  Rendered qits/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 124ms (Views: 117.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/qits/new" for ::1 at 2016-09-16 12:40:36 +0530
+Processing by QitsController#new as HTML
+  Rendered qits/new.html.erb within layouts/application (327.1ms)
+Completed 200 OK in 445ms (Views: 392.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/qits" for ::1 at 2016-09-16 12:40:52 +0530
+Processing by QitsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kXrE0s/4oLnTvWvJxhCIVpvWg7QyDMwyut1Dc82WbMNv4gr4TSDcojYTMsZ5G0lQ/uBzEIKdSVV6awGcvg6TqA==", "qit"=>{"borrower_id"=>"QT1050", "borrower"=>"anup kumar kannur", "item"=>"Mac OS", "item_id"=>"ads12212", "borrowed_on(1i)"=>"2016", "borrowed_on(2i)"=>"9", "borrowed_on(3i)"=>"16", "returned_on(1i)"=>"2016", "returned_on(2i)"=>"9", "returned_on(3i)"=>"16", "item_status"=>"BORROWED", "issue"=>"battery problem", "incharge"=>"MANJUNATH DINKA"}, "commit"=>"Submit"}
+Unpermitted parameters: returned_on(1i), returned_on(2i), returned_on(3i)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mQit Exists (0.3ms)[0m  SELECT  1 AS one FROM "qits" WHERE "qits"."borrower_id" = 'QT1050' LIMIT 1
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "qits" ("borrower_id", "borrower", "item", "item_id", "item_status", "incharge", "issue", "borrowed_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["borrower_id", "QT1050"], ["borrower", "anup kumar kannur"], ["item", "Mac OS"], ["item_id", "ads12212"], ["item_status", "BORROWED"], ["incharge", "MANJUNATH DINKA"], ["issue", "battery problem"], ["borrowed_on", "2016-09-16"], ["created_at", "2016-09-16 07:10:52.797036"], ["updated_at", "2016-09-16 07:10:52.797036"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 130ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/" for ::1 at 2016-09-16 12:40:52 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (0.9ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 8 OFFSET 0[0m
+  Rendered qits/_qit.html.erb (0.8ms)
+  Rendered qits/index.html.erb within layouts/application (37.2ms)
+Completed 200 OK in 113ms (Views: 109.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/qits/new" for ::1 at 2016-09-16 12:40:56 +0530
+Processing by QitsController#new as HTML
+  Rendered qits/new.html.erb within layouts/application (40.7ms)
+Completed 200 OK in 112ms (Views: 109.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/qits" for ::1 at 2016-09-16 12:41:11 +0530
+Processing by QitsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3EtN0Vb96/EbuZvsoBXucZpHxcWlP3HY14e0uxR722oi04P71CWX6v4XwuMfHi93/3E1YRWu9L8XMfZUZ+MkAQ==", "qit"=>{"borrower_id"=>"QT1051", "borrower"=>"Vidwath", "item"=>"Windows", "item_id"=>"11210000a", "borrowed_on(1i)"=>"2016", "borrowed_on(2i)"=>"9", "borrowed_on(3i)"=>"16", "returned_on(1i)"=>"2016", "returned_on(2i)"=>"9", "returned_on(3i)"=>"16", "item_status"=>"BORROWED", "issue"=>"Nothing", "incharge"=>"MANJUNATH DINKA"}, "commit"=>"Submit"}
+Unpermitted parameters: returned_on(1i), returned_on(2i), returned_on(3i)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mQit Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "qits" WHERE "qits"."borrower_id" = 'QT1051' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "qits" ("borrower_id", "borrower", "item", "item_id", "item_status", "incharge", "issue", "borrowed_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["borrower_id", "QT1051"], ["borrower", "Vidwath"], ["item", "Windows"], ["item_id", "11210000a"], ["item_status", "BORROWED"], ["incharge", "MANJUNATH DINKA"], ["issue", "Nothing"], ["borrowed_on", "2016-09-16"], ["created_at", "2016-09-16 07:11:11.586331"], ["updated_at", "2016-09-16 07:11:11.586331"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2016-09-16 12:41:11 +0530
+Processing by QitsController#index as HTML
+  [1m[35mQit Load (0.4ms)[0m  SELECT  "qits".* FROM "qits" LIMIT 8 OFFSET 0
+  Rendered qits/_qit.html.erb (0.6ms)
+  Rendered qits/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 79ms (Views: 76.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/qits?utf8=%E2%9C%93&search=WINDOWS&commit=Search" for ::1 at 2016-09-16 12:41:26 +0530
+Processing by QitsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"WINDOWS", "commit"=>"Search"}
+  [1m[36mQit Load (0.7ms)[0m  [1mSELECT  "qits".* FROM "qits" WHERE (item LIKE '%WINDOWS%')  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  Rendered qits/_qit.html.erb (0.1ms)
+  Rendered qits/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 97ms (Views: 93.8ms | ActiveRecord: 0.7ms)
+  [1m[36m (6.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (1.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateQits (20160915084716)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "qits" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "borrower_id" varchar, "borrower" varchar, "item" varchar, "item_id" varchar, "borrowed_on" date, "returned_on" date, "item_status" varchar, "issue" varchar, "incharge" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160915084716"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for ::1 at 2016-09-16 12:43:04 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QitsController#index as HTML
+  [1m[35mQit Load (0.5ms)[0m  SELECT  "qits".* FROM "qits" LIMIT 8 OFFSET 0
+  Rendered qits/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 770ms (Views: 732.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/qits/new" for ::1 at 2016-09-16 12:43:09 +0530
+Processing by QitsController#new as HTML
+  Rendered qits/new.html.erb within layouts/application (165.1ms)
+Completed 200 OK in 287ms (Views: 217.4ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/qits" for ::1 at 2016-09-16 12:43:29 +0530
+Processing by QitsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cYrLsgvCIX+TXRPu/nBv48My12CvIg6WvefIcW6cPWCPEgWYiRpdZHbzSuFBe67lpgQnxB+zi/F9UYqeHQTCCw==", "qit"=>{"borrower_id"=>"QT1050", "borrower"=>"anup kumar kannur", "item"=>"Mac OS", "item_id"=>"1212121", "borrowed_on(1i)"=>"2016", "borrowed_on(2i)"=>"9", "borrowed_on(3i)"=>"16", "returned_on(1i)"=>"2016", "returned_on(2i)"=>"9", "returned_on(3i)"=>"16", "item_status"=>"BORROWED", "issue"=>"battery problem", "incharge"=>"ANUPAMA"}, "commit"=>"Submit"}
+Unpermitted parameters: returned_on(1i), returned_on(2i), returned_on(3i)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mQit Exists (0.3ms)[0m  SELECT  1 AS one FROM "qits" WHERE "qits"."borrower_id" = 'QT1050' LIMIT 1
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "qits" ("borrower_id", "borrower", "item", "item_id", "item_status", "incharge", "issue", "borrowed_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["borrower_id", "QT1050"], ["borrower", "anup kumar kannur"], ["item", "Mac OS"], ["item_id", "1212121"], ["item_status", "BORROWED"], ["incharge", "ANUPAMA"], ["issue", "battery problem"], ["borrowed_on", "2016-09-16"], ["created_at", "2016-09-16 07:13:29.777275"], ["updated_at", "2016-09-16 07:13:29.777275"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mQit Exists (1.0ms)[0m  SELECT  1 AS one FROM "qits" WHERE ("qits"."borrower_id" = 'QT1050' AND "qits"."id" != 1) LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "qits" SET "borrower" = ?, "item" = ?, "issue" = ?, "updated_at" = ? WHERE "qits"."id" = ?[0m  [["borrower", "ANUP KUMAR KANNUR"], ["item", "MAC OS"], ["issue", "BATTERY PROBLEM"], ["updated_at", "2016-09-16 07:13:29.794271"], ["id", 1]]
+  [1m[35m (1.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 150ms (ActiveRecord: 8.1ms)
+
+
+Started GET "/" for ::1 at 2016-09-16 12:43:29 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (0.4ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 8 OFFSET 0[0m
+  Rendered qits/_qit.html.erb (0.8ms)
+  Rendered qits/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 97ms (Views: 92.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/qits/new" for ::1 at 2016-09-16 12:43:38 +0530
+Processing by QitsController#new as HTML
+  Rendered qits/new.html.erb within layouts/application (36.7ms)
+Completed 200 OK in 106ms (Views: 103.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/qits" for ::1 at 2016-09-16 12:43:56 +0530
+Processing by QitsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b98/2MqFzs2U1HvA3rboIcija1/D6i+LMVy04Fq+Y7aRR/HySF2y1nF6Is9hvSknrZWb+3N7quzx6vYPKSac3Q==", "qit"=>{"borrower_id"=>"QT1051", "borrower"=>"Vidwath", "item"=>"Windows", "item_id"=>"23323232", "borrowed_on(1i)"=>"2016", "borrowed_on(2i)"=>"9", "borrowed_on(3i)"=>"16", "returned_on(1i)"=>"2016", "returned_on(2i)"=>"9", "returned_on(3i)"=>"16", "item_status"=>"BORROWED", "issue"=>"Nothing", "incharge"=>"MANJUNATH DINKA"}, "commit"=>"Submit"}
+Unpermitted parameters: returned_on(1i), returned_on(2i), returned_on(3i)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mQit Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "qits" WHERE "qits"."borrower_id" = 'QT1051' LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "qits" ("borrower_id", "borrower", "item", "item_id", "item_status", "incharge", "issue", "borrowed_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["borrower_id", "QT1051"], ["borrower", "Vidwath"], ["item", "Windows"], ["item_id", "23323232"], ["item_status", "BORROWED"], ["incharge", "MANJUNATH DINKA"], ["issue", "Nothing"], ["borrowed_on", "2016-09-16"], ["created_at", "2016-09-16 07:13:56.928031"], ["updated_at", "2016-09-16 07:13:56.928031"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mQit Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "qits" WHERE ("qits"."borrower_id" = 'QT1051' AND "qits"."id" != 2) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "qits" SET "borrower" = ?, "item" = ?, "issue" = ?, "updated_at" = ? WHERE "qits"."id" = ?  [["borrower", "VIDWATH"], ["item", "WINDOWS"], ["issue", "NOTHING"], ["updated_at", "2016-09-16 07:13:56.940974"], ["id", 2]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 32ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/" for ::1 at 2016-09-16 12:43:56 +0530
+Processing by QitsController#index as HTML
+  [1m[35mQit Load (1.0ms)[0m  SELECT  "qits".* FROM "qits" LIMIT 8 OFFSET 0
+  Rendered qits/_qit.html.erb (0.1ms)
+  Rendered qits/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 86ms (Views: 82.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/qits/new" for ::1 at 2016-09-16 12:44:00 +0530
+Processing by QitsController#new as HTML
+  Rendered qits/new.html.erb within layouts/application (38.9ms)
+Completed 200 OK in 103ms (Views: 100.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/qits" for ::1 at 2016-09-16 12:44:41 +0530
+Processing by QitsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QBmcUKXtvpqIBKa71l7PUxkqF+8tqdXaTgkOht+uBX2+gVJ6JzXCgW2q/7RpVQ5VfBznS504UL2Ov0xprDb6Fg==", "qit"=>{"borrower_id"=>"qt1052", "borrower"=>"Soma", "item"=>"Ubuntu", "item_id"=>"4005050", "borrowed_on(1i)"=>"2016", "borrowed_on(2i)"=>"9", "borrowed_on(3i)"=>"16", "returned_on(1i)"=>"2016", "returned_on(2i)"=>"9", "returned_on(3i)"=>"16", "item_status"=>"BORROWED", "issue"=>"Nothing", "incharge"=>"MANJUNATH DINKA"}, "commit"=>"Submit"}
+Unpermitted parameters: returned_on(1i), returned_on(2i), returned_on(3i)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mQit Exists (0.4ms)[0m  SELECT  1 AS one FROM "qits" WHERE "qits"."borrower_id" = 'qt1052' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "qits" ("borrower_id", "borrower", "item", "item_id", "item_status", "incharge", "issue", "borrowed_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["borrower_id", "qt1052"], ["borrower", "Soma"], ["item", "Ubuntu"], ["item_id", "4005050"], ["item_status", "BORROWED"], ["incharge", "MANJUNATH DINKA"], ["issue", "Nothing"], ["borrowed_on", "2016-09-16"], ["created_at", "2016-09-16 07:14:41.525691"], ["updated_at", "2016-09-16 07:14:41.525691"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mQit Exists (0.3ms)[0m  SELECT  1 AS one FROM "qits" WHERE ("qits"."borrower_id" = 'QT1052' AND "qits"."id" != 3) LIMIT 1
+  [1m[36mSQL (1.1ms)[0m  [1mUPDATE "qits" SET "borrower_id" = ?, "borrower" = ?, "item" = ?, "issue" = ?, "updated_at" = ? WHERE "qits"."id" = ?[0m  [["borrower_id", "QT1052"], ["borrower", "SOMA"], ["item", "UBUNTU"], ["issue", "NOTHING"], ["updated_at", "2016-09-16 07:14:41.536320"], ["id", 3]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 27ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/" for ::1 at 2016-09-16 12:44:41 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (0.7ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 8 OFFSET 0[0m
+  Rendered qits/_qit.html.erb (0.5ms)
+  Rendered qits/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 93ms (Views: 87.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/qits/3/edit" for ::1 at 2016-09-16 12:44:46 +0530
+Processing by QitsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mQit Load (0.4ms)[0m  SELECT  "qits".* FROM "qits" WHERE "qits"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered qits/edit.html.erb within layouts/application (60.9ms)
+Completed 200 OK in 179ms (Views: 117.1ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/qits/3" for ::1 at 2016-09-16 12:44:50 +0530
+Processing by QitsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DoGb8bOOPFKm13SQUTdSKPcsXZh+h1Ww6N10vBQ4HufwGVXbMVZASUN5LZ/uPJMukhqtPM4W0NcoazZTZ6DhjA==", "qit"=>{"borrower_id"=>"QT1052", "borrower"=>"SOMA", "item"=>"UBUNTU", "item_id"=>"4005050", "borrowed_on(1i)"=>"2016", "borrowed_on(2i)"=>"9", "borrowed_on(3i)"=>"16", "returned_on(1i)"=>"2016", "returned_on(2i)"=>"9", "returned_on(3i)"=>"16", "item_status"=>"BORROWED", "issue"=>"NOTHING", "incharge"=>"ANUPAMA"}, "commit"=>"Submit", "id"=>"3"}
+  [1m[36mQit Load (0.3ms)[0m  [1mSELECT  "qits".* FROM "qits" WHERE "qits"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mQit Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "qits" WHERE ("qits"."borrower_id" = 'QT1052' AND "qits"."id" != 3) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "qits" SET "incharge" = ?, "returned_on" = ?, "updated_at" = ? WHERE "qits"."id" = ?  [["incharge", "ANUPAMA"], ["returned_on", "2016-09-16"], ["updated_at", "2016-09-16 07:14:50.659914"], ["id", 3]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mQit Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "qits" WHERE ("qits"."borrower_id" = 'QT1052' AND "qits"."id" != 3) LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE "qits" SET "returned_on" = ?, "updated_at" = ? WHERE "qits"."id" = ?  [["returned_on", nil], ["updated_at", "2016-09-16 07:14:50.669698"], ["id", 3]]
+  [1m[36m (3.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/qits
+Completed 302 Found in 29ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/qits" for ::1 at 2016-09-16 12:44:50 +0530
+Processing by QitsController#index as HTML
+  [1m[35mQit Load (0.8ms)[0m  SELECT  "qits".* FROM "qits" LIMIT 8 OFFSET 0
+  Rendered qits/_qit.html.erb (0.4ms)
+  Rendered qits/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 111ms (Views: 106.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/qits?utf8=%E2%9C%93&search=ubu&commit=Search" for ::1 at 2016-09-16 12:45:20 +0530
+Processing by QitsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"ubu", "commit"=>"Search"}
+  [1m[36mQit Load (0.5ms)[0m  [1mSELECT  "qits".* FROM "qits" WHERE (item LIKE '%ubu%')  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  Rendered qits/_qit.html.erb (0.1ms)
+  Rendered qits/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 64ms (Views: 60.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qits?utf8=%E2%9C%93&search=os&commit=Search" for ::1 at 2016-09-16 12:45:24 +0530
+Processing by QitsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"os", "commit"=>"Search"}
+  [1m[35mQit Load (0.5ms)[0m  SELECT  "qits".* FROM "qits" WHERE (item LIKE '%os%')  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  Rendered qits/_qit.html.erb (0.1ms)
+  Rendered qits/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 65ms (Views: 61.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qits?utf8=%E2%9C%93&search=win&commit=Search" for ::1 at 2016-09-16 12:45:29 +0530
+Processing by QitsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"win", "commit"=>"Search"}
+  [1m[36mQit Load (0.5ms)[0m  [1mSELECT  "qits".* FROM "qits" WHERE (item LIKE '%win%')  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  Rendered qits/_qit.html.erb (0.2ms)
+  Rendered qits/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 77ms (Views: 72.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/qits?utf8=%E2%9C%93&search=dows&commit=Search" for ::1 at 2016-09-16 12:45:32 +0530
+Processing by QitsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"dows", "commit"=>"Search"}
+  [1m[35mQit Load (0.7ms)[0m  SELECT  "qits".* FROM "qits" WHERE (item LIKE '%dows%')  ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  Rendered qits/_qit.html.erb (0.1ms)
+  Rendered qits/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 96ms (Views: 77.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/qits?utf8=%E2%9C%93&search=&commit=Search" for ::1 at 2016-09-16 12:45:35 +0530
+Processing by QitsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "commit"=>"Search"}
+  [1m[36mQit Load (0.9ms)[0m  [1mSELECT  "qits".* FROM "qits" WHERE (item LIKE '%%')  ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  Rendered qits/_qit.html.erb (0.1ms)
+  Rendered qits/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 79ms (Views: 75.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-09-16 12:45:50 +0530
+Processing by QitsController#index as HTML
+  [1m[35mQit Load (0.7ms)[0m  SELECT  "qits".* FROM "qits" LIMIT 8 OFFSET 0
+  Rendered qits/_qit.html.erb (0.1ms)
+  Rendered qits/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 99ms (Views: 94.7ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/qits/3" for ::1 at 2016-09-16 12:46:02 +0530
+Processing by QitsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LCOpCXkTbOLP79Acp4t7+uefcheEzkedgRNQGn0dyS3Su2cj+8sQ+SpBiRMYgLr8gqmCszRfwvpBpRL1DoU2Rg==", "id"=>"3"}
+  [1m[36mQit Load (0.4ms)[0m  [1mSELECT  "qits".* FROM "qits" WHERE "qits"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "qits" WHERE "qits"."id" = ?[0m  [["id", 3]]
+  [1m[35m (2.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/qits
+Completed 302 Found in 11ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/qits" for ::1 at 2016-09-16 12:46:02 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (0.4ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 8 OFFSET 0[0m
+  Rendered qits/_qit.html.erb (0.1ms)
+  Rendered qits/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 79ms (Views: 75.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/qits/1/edit" for ::1 at 2016-09-16 12:46:29 +0530
+Processing by QitsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mQit Load (0.3ms)[0m  SELECT  "qits".* FROM "qits" WHERE "qits"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered qits/edit.html.erb within layouts/application (79.4ms)
+Completed 200 OK in 214ms (Views: 206.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/qits" for ::1 at 2016-09-16 12:46:36 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (0.6ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 8 OFFSET 0[0m
+  Rendered qits/_qit.html.erb (0.3ms)
+  Rendered qits/index.html.erb within layouts/application (68.6ms)
+Completed 200 OK in 192ms (Views: 180.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/qits/new" for ::1 at 2016-09-16 12:46:38 +0530
+Processing by QitsController#new as HTML
+  Rendered qits/new.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 127ms (Views: 122.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/qits" for ::1 at 2016-09-16 12:47:08 +0530
+Processing by QitsController#index as HTML
+  [1m[35mQit Load (1.2ms)[0m  SELECT  "qits".* FROM "qits" LIMIT 8 OFFSET 0
+  Rendered qits/_qit.html.erb (0.4ms)
+  Rendered qits/index.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 145ms (Views: 140.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/qits/2/edit" for ::1 at 2016-09-16 12:47:11 +0530
+Processing by QitsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mQit Load (0.3ms)[0m  [1mSELECT  "qits".* FROM "qits" WHERE "qits"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered qits/edit.html.erb within layouts/application (43.5ms)
+Completed 200 OK in 93ms (Views: 89.0ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/qits/2" for ::1 at 2016-09-16 12:47:18 +0530
+Processing by QitsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tqt6y906KG4h6DVYOqQR89nYT3QSYsDYc4ziUGSvQruwM7ThX+JUdcRGbFeFr9D1vO6/0KLzRb+zOqC/Fze90A==", "qit"=>{"borrower_id"=>"QT1051", "borrower"=>"VIDWATH", "item"=>"WINDOWS", "item_id"=>"23323232", "borrowed_on(1i)"=>"2016", "borrowed_on(2i)"=>"9", "borrowed_on(3i)"=>"16", "returned_on(1i)"=>"2016", "returned_on(2i)"=>"9", "returned_on(3i)"=>"16", "item_status"=>"RETURNED", "issue"=>"NOTHING", "incharge"=>"MANJUNATH DINKA"}, "commit"=>"Submit", "id"=>"2"}
+  [1m[35mQit Load (0.4ms)[0m  SELECT  "qits".* FROM "qits" WHERE "qits"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mQit Exists (0.3ms)[0m  SELECT  1 AS one FROM "qits" WHERE ("qits"."borrower_id" = 'QT1051' AND "qits"."id" != 2) LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "qits" SET "item_status" = ?, "returned_on" = ?, "updated_at" = ? WHERE "qits"."id" = ?[0m  [["item_status", "RETURNED"], ["returned_on", "2016-09-16"], ["updated_at", "2016-09-16 07:17:18.491782"], ["id", 2]]
+  [1m[35m (5.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/qits
+Completed 302 Found in 23ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/qits" for ::1 at 2016-09-16 12:47:18 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (0.5ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 8 OFFSET 0[0m
+  Rendered qits/_qit.html.erb (0.2ms)
+  Rendered qits/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 82ms (Views: 80.1ms | ActiveRecord: 0.5ms)

@@ -41,6 +41,7 @@ class QitsController < ApplicationController
       @qit.item_status.upcase!
       @qit.incharge.upcase!
       @qit.issue.upcase!
+      @qit.save!
       redirect_to root_path
     else
       render "new"
