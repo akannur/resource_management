@@ -16,6 +16,10 @@ class QitsController < ApplicationController
     @qit = Qit.find params[:id]
   end
 
+  def show
+    @qit=Qit.find(params[:id])
+  end
+
   def update
     @qit = Qit.find(params[:id])
     if @qit.update_attributes(qit_params)
