@@ -9,7 +9,7 @@ class Qit < ActiveRecord::Base
   validates :issue, presence: true
   self.per_page = 8
   def self.search(search)
-    where("item LIKE ?", "%#{search}%")
+    where("item LIKE ?", "%#{search.upcase}%")
   end
 
 end
