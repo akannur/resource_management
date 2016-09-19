@@ -12651,3 +12651,90 @@ Processing by QitsController#index as HTML
   [1m[35mQit Load (0.9ms)[0m  SELECT  "qits".* FROM "qits" LIMIT 8 OFFSET 0
   Rendered qits/index.html.erb within layouts/application (4.7ms)
 Completed 200 OK in 84ms (Views: 79.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-09-19 18:01:16 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QitsController#index as HTML
+  [1m[35mQit Load (1.7ms)[0m  SELECT  "qits".* FROM "qits" LIMIT 8 OFFSET 0
+  Rendered qits/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 839ms (Views: 792.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/qits/new" for ::1 at 2016-09-19 18:01:28 +0530
+Processing by QitsController#new as HTML
+  Rendered qits/new.html.erb within layouts/application (193.2ms)
+Completed 200 OK in 386ms (Views: 302.4ms | ActiveRecord: 32.8ms)
+
+
+Started POST "/qits" for ::1 at 2016-09-19 18:01:40 +0530
+Processing by QitsController#create as HTML
+  Parameters: {"utf8"=>"✓", "qit"=>{"borrower_id"=>"a", "borrower"=>"a", "item"=>"a", "item_id"=>"23232323", "borrowed_on(1i)"=>"2016", "borrowed_on(2i)"=>"9", "borrowed_on(3i)"=>"19", "returned_on(1i)"=>"2016", "returned_on(2i)"=>"9", "returned_on(3i)"=>"19", "item_status"=>"BORROWED", "issue"=>"1aasddsad", "incharge"=>"MANJUNATH DINKA"}, "commit"=>"Submit"}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mQit Exists (2.2ms)[0m  SELECT  1 AS one FROM "qits" WHERE "qits"."borrower_id" = 'a' LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "qits" ("borrower_id", "borrower", "item", "item_id", "item_status", "incharge", "issue", "borrowed_on", "returned_on", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["borrower_id", "a"], ["borrower", "a"], ["item", "a"], ["item_id", "23232323"], ["item_status", "BORROWED"], ["incharge", "MANJUNATH DINKA"], ["issue", "1aasddsad"], ["borrowed_on", "2016-09-19"], ["returned_on", "2016-09-19"], ["created_at", "2016-09-19 12:31:40.322320"], ["updated_at", "2016-09-19 12:31:40.322320"]]
+  [1m[35m (1.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mQit Exists (0.8ms)[0m  SELECT  1 AS one FROM "qits" WHERE ("qits"."borrower_id" = 'A' AND "qits"."id" != 5) LIMIT 1
+  [1m[36mSQL (1.1ms)[0m  [1mUPDATE "qits" SET "borrower_id" = $1, "borrower" = $2, "item" = $3, "issue" = $4, "returned_on" = $5, "updated_at" = $6 WHERE "qits"."id" = $7[0m  [["borrower_id", "A"], ["borrower", "A"], ["item", "A"], ["issue", "1AASDDSAD"], ["returned_on", nil], ["updated_at", "2016-09-19 12:31:40.344080"], ["id", 5]]
+  [1m[35m (0.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 123ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/" for ::1 at 2016-09-19 18:01:40 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (1.0ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 8 OFFSET 0[0m
+  Rendered qits/_qit.html.erb (1.1ms)
+  Rendered qits/index.html.erb within layouts/application (29.3ms)
+Completed 200 OK in 166ms (Views: 161.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/qits/5/edit" for ::1 at 2016-09-19 18:02:05 +0530
+Processing by QitsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mQit Load (0.9ms)[0m  SELECT  "qits".* FROM "qits" WHERE "qits"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered qits/edit.html.erb within layouts/application (40.3ms)
+Completed 200 OK in 218ms (Views: 161.3ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/qits/5" for ::1 at 2016-09-19 18:02:13 +0530
+Processing by QitsController#update as HTML
+  Parameters: {"utf8"=>"✓", "qit"=>{"borrower_id"=>"A", "borrower"=>"A", "item"=>"A b", "item_id"=>"23232323", "borrowed_on(1i)"=>"2016", "borrowed_on(2i)"=>"9", "borrowed_on(3i)"=>"19", "returned_on(1i)"=>"2016", "returned_on(2i)"=>"9", "returned_on(3i)"=>"19", "item_status"=>"BORROWED", "issue"=>"1AASDDSAD", "incharge"=>"MANJUNATH DINKA"}, "commit"=>"Submit", "id"=>"5"}
+  [1m[36mQit Load (1.0ms)[0m  [1mSELECT  "qits".* FROM "qits" WHERE "qits"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mQit Exists (1.2ms)[0m  [1mSELECT  1 AS one FROM "qits" WHERE ("qits"."borrower_id" = 'A' AND "qits"."id" != 5) LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE "qits" SET "item" = $1, "returned_on" = $2, "updated_at" = $3 WHERE "qits"."id" = $4  [["item", "A b"], ["returned_on", "2016-09-19"], ["updated_at", "2016-09-19 12:32:13.607356"], ["id", 5]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mQit Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "qits" WHERE ("qits"."borrower_id" = 'A' AND "qits"."id" != 5) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "qits" SET "returned_on" = $1, "updated_at" = $2 WHERE "qits"."id" = $3  [["returned_on", nil], ["updated_at", "2016-09-19 12:32:13.619941"], ["id", 5]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/qits
+Completed 302 Found in 34ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/qits" for ::1 at 2016-09-19 18:02:13 +0530
+Processing by QitsController#index as HTML
+  [1m[35mQit Load (1.2ms)[0m  SELECT  "qits".* FROM "qits" LIMIT 8 OFFSET 0
+  Rendered qits/_qit.html.erb (0.4ms)
+  Rendered qits/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 100ms (Views: 96.8ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/qits/5" for ::1 at 2016-09-19 18:02:24 +0530
+Processing by QitsController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mQit Load (0.9ms)[0m  [1mSELECT  "qits".* FROM "qits" WHERE "qits"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "qits" WHERE "qits"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/qits
+Completed 302 Found in 9ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/qits" for ::1 at 2016-09-19 18:02:24 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (0.9ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 8 OFFSET 0[0m
+  Rendered qits/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 100ms (Views: 96.8ms | ActiveRecord: 0.9ms)
