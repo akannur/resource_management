@@ -74,8 +74,7 @@ class QitsController < ApplicationController
   end
 
   def destroy
-    @qit = Qit.find(params[:id])
-    @qit.destroy
+    Qit.find( params[:id] ).destroy
     redirect_to qits_path
   end
 
