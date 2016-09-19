@@ -11996,3 +11996,18 @@ Completed 200 OK in 470ms (Views: 465.8ms | ActiveRecord: 1.1ms)
 
 
 Started GET "/assets/qit.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-09-19 16:23:45 +0530
+
+
+Started GET "/" for ::1 at 2016-09-19 16:27:58 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QitsController#index as HTML
+  [1m[35mQit Load (1.5ms)[0m  SELECT  "qits".* FROM "qits" LIMIT 8 OFFSET 0
+  Rendered qits/_qit.html.erb (2.2ms)
+  Rendered qits/index.html.erb within layouts/application (85.1ms)
+Completed 200 OK in 2028ms (Views: 1956.7ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/assets/application.self-026bcb90da5abdc2a3349151c67b6a605919d939c7277b6300d70dd212be0579.css?body=1" for ::1 at 2016-09-19 16:28:01 +0530
+
+
+Started GET "/assets/qit.self-965ee01caffca097c88141e382051807925a71e8ed8517f7cbd3d05555ea2be3.css?body=1" for ::1 at 2016-09-19 16:28:01 +0530
