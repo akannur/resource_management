@@ -1,16 +1,18 @@
-development:
+default: &default
   adapter: postgresql
-  encoding: unicode
-  database: qit_development
   pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: db/qit_development
   username: anup
 
 test:
-  adapter: postgresql
-  encoding: unicode
-  database: qit_test
-  pool: 5
+  <<: *default
+  database: db/qit_test
   username: anup
 
 production:
-  url: <%= ENV['postgres://vdvmecftrzelqf:GBFqkyP3_iNrX-XuaBgeOUf0iv@ec2-54-243-63-130.compute-1.amazonaws.com:5432/dencm78253333f'] %>
+  <<: *default
+  database: db/qit_production
