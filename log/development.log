@@ -11793,3 +11793,51 @@ Processing by QitsController#index as HTML
   Rendered qits/_qit.html.erb (0.2ms)
   Rendered qits/index.html.erb within layouts/application (14.8ms)
 Completed 200 OK in 81ms (Views: 78.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-09-19 15:50:58 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QitsController#index as HTML
+Filter chain halted as :authenticate rendered or redirected
+Completed 401 Unauthorized in 128ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-09-19 15:51:02 +0530
+Processing by QitsController#index as HTML
+  [1m[35mQit Load (2.5ms)[0m  SELECT  "qits".* FROM "qits" LIMIT 8 OFFSET 0
+  Rendered qits/_qit.html.erb (3.6ms)
+  Rendered qits/index.html.erb within layouts/application (141.7ms)
+Completed 200 OK in 2371ms (Views: 2343.4ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/assets/bootstrap.min.self-511807f34f490c5d04f397a2ad4fc4a9135fcb5300f3dd5cb88f1cf678357cf3.css?body=1" for ::1 at 2016-09-19 15:51:05 +0530
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-09-19 15:51:05 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-09-19 15:51:05 +0530
+
+
+Started GET "/assets/qit.self-61bff1850cbc6905108d2da451d3b0380b6903bd0cac0cd313076483ea8a0acc.css?body=1" for ::1 at 2016-09-19 15:51:05 +0530
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2016-09-19 15:51:05 +0530
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for ::1 at 2016-09-19 15:51:05 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-09-19 15:51:05 +0530
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2016-09-19 15:51:05 +0530
+
+
+Started GET "/assets/qit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-19 15:51:05 +0530
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-09-19 15:51:05 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-09-19 15:51:05 +0530
