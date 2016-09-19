@@ -11,3 +11,6 @@ test:
   database: qit_test
   pool: 5
   username: anup
+
+production:
+  url: <%= ENV['postgres://vdvmecftrzelqf:GBFqkyP3_iNrX-XuaBgeOUf0iv@ec2-54-243-63-130.compute-1.amazonaws.com:5432/dencm78253333f'] %>
