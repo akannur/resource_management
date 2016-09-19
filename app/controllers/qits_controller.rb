@@ -24,6 +24,14 @@ class QitsController < ApplicationController
         @qit.save!
         redirect_to qits_path
       else
+        @qit.borrower_id.upcase!
+        @qit.borrower.upcase!
+        @qit.item.upcase!
+        @qit.item_id.upcase!
+        @qit.item_status.upcase!
+        @qit.incharge.upcase!
+        @qit.issue.upcase!
+        @qit.save!
         redirect_to qits_path
       end
     else
@@ -32,17 +40,30 @@ class QitsController < ApplicationController
   end
 
   def create
-    @qit = Qit.new(params.require(:qit).permit(:borrower_id, :borrower, :item, :item_id, :borrowed_on, :item_status, :incharge, :issue))
+    @qit = Qit.new(qit_params)
     if @qit.save
-      @qit.borrower_id.upcase!
-      @qit.borrower.upcase!
-      @qit.item.upcase!
-      @qit.item_id.upcase!
-      @qit.item_status.upcase!
-      @qit.incharge.upcase!
-      @qit.issue.upcase!
-      @qit.save!
-      redirect_to root_path
+      if @qit.item_status == "BORROWED"
+        @qit.returned_on = nil
+        @qit.borrower_id.upcase!
+        @qit.borrower.upcase!
+        @qit.item.upcase!
+        @qit.item_id.upcase!
+        @qit.item_status.upcase!
+        @qit.incharge.upcase!
+        @qit.issue.upcase!
+        @qit.save!
+        redirect_to root_path
+      else
+        @qit.borrower_id.upcase!
+        @qit.borrower.upcase!
+        @qit.item.upcase!
+        @qit.item_id.upcase!
+        @qit.item_status.upcase!
+        @qit.incharge.upcase!
+        @qit.issue.upcase!
+        @qit.save!
+        redirect_to root_path
+      end
     else
       render "new"
     end
@@ -51,7 +72,6 @@ class QitsController < ApplicationController
   def destroy
     @qit = Qit.find(params[:id])
     @qit.destroy
-
     redirect_to qits_path
   end
 
