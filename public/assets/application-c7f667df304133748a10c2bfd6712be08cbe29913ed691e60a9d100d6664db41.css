@@ -1,0 +1,94 @@
+/* line 4, /Users/anup/Desktop/resource_management/app/assets/stylesheets/qit.scss */
+body {
+  background: #ccc;
+}
+
+/* line 8, /Users/anup/Desktop/resource_management/app/assets/stylesheets/qit.scss */
+.alignment label {
+  padding-right: 162px;
+}
+
+/* line 12, /Users/anup/Desktop/resource_management/app/assets/stylesheets/qit.scss */
+.alignment-184 label {
+  padding-right: 184px;
+}
+
+/* line 16, /Users/anup/Desktop/resource_management/app/assets/stylesheets/qit.scss */
+.alignment-122 label {
+  padding-right: 122px;
+}
+
+/* line 20, /Users/anup/Desktop/resource_management/app/assets/stylesheets/qit.scss */
+.alignment-check label {
+  padding-right: 285px;
+}
+
+/* line 24, /Users/anup/Desktop/resource_management/app/assets/stylesheets/qit.scss */
+.alignment-checka label {
+  padding-right: 225px;
+}
+
+/* line 28, /Users/anup/Desktop/resource_management/app/assets/stylesheets/qit.scss */
+.alignment-122a label {
+  padding-right: 133px;
+}
+
+/* line 33, /Users/anup/Desktop/resource_management/app/assets/stylesheets/qit.scss */
+.alignment-2 label {
+  padding-right: 185px;
+}
+
+/* line 37, /Users/anup/Desktop/resource_management/app/assets/stylesheets/qit.scss */
+.alignment-2a label {
+  padding-right: 180px;
+}
+
+/* line 41, /Users/anup/Desktop/resource_management/app/assets/stylesheets/qit.scss */
+.alignment-2b label {
+  padding-right: 224px;
+}
+
+/* line 45, /Users/anup/Desktop/resource_management/app/assets/stylesheets/qit.scss */
+.alignment-4 label {
+  padding-right: 223px;
+}
+
+/* line 49, /Users/anup/Desktop/resource_management/app/assets/stylesheets/qit.scss */
+.alignment-5 label {
+  padding-right: 209px;
+}
+
+/* line 53, /Users/anup/Desktop/resource_management/app/assets/stylesheets/qit.scss */
+nav.navbar.navbar-default {
+  background: #000;
+  padding: 11px 0;
+}
+
+/* line 58, /Users/anup/Desktop/resource_management/app/assets/stylesheets/qit.scss */
+.head {
+  color: red;
+  font-size: 31px;
+  margin-left: 44%;
+  padding-top: 2px;
+}
+
+/* line 65, /Users/anup/Desktop/resource_management/app/assets/stylesheets/qit.scss */
+#b {
+  text-align: center;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
