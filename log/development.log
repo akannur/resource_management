@@ -15555,3 +15555,1317 @@ Processing by QitsController#index as HTML
   Rendered qits/_qit.html.erb (0.2ms)
   Rendered qits/index.html.erb within layouts/application (18.5ms)
 Completed 200 OK in 88ms (Views: 85.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/qits?utf8=%E2%9C%93&search=mobile&commit=Search" for ::1 at 2016-09-21 23:40:33 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QitsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"mobile", "commit"=>"Search"}
+  [1m[35mQit Load (2.0ms)[0m  SELECT  "qits".* FROM "qits" WHERE (item LIKE '%MOBILE%')  ORDER BY created_at DESC LIMIT 6 OFFSET 0
+  Rendered qits/_qit.html.erb (0.9ms)
+  Rendered qits/index.html.erb within layouts/application (61.3ms)
+Completed 200 OK in 1062ms (Views: 1016.9ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/qits?utf8=%E2%9C%93&search=windows&commit=Search" for ::1 at 2016-09-21 23:40:40 +0530
+Processing by QitsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"windows", "commit"=>"Search"}
+  [1m[36mQit Load (1.7ms)[0m  [1mSELECT  "qits".* FROM "qits" WHERE (item LIKE '%WINDOWS%')  ORDER BY created_at DESC LIMIT 6 OFFSET 0[0m
+  Rendered qits/_qit.html.erb (0.2ms)
+  Rendered qits/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 84ms (Views: 80.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/qits?utf8=%E2%9C%93&search=mac&commit=Search" for ::1 at 2016-09-21 23:40:43 +0530
+Processing by QitsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"mac", "commit"=>"Search"}
+  [1m[35mQit Load (1.0ms)[0m  SELECT  "qits".* FROM "qits" WHERE (item LIKE '%MAC%')  ORDER BY created_at DESC LIMIT 6 OFFSET 0
+  Rendered qits/_qit.html.erb (0.1ms)
+  Rendered qits/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 68ms (Views: 65.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-09-21 23:40:55 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (0.9ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/_qit.html.erb (0.2ms)
+  Rendered qits/index.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 125ms (Views: 120.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/qits?utf8=%E2%9C%93&search=mac&commit=Search" for ::1 at 2016-09-21 23:41:01 +0530
+Processing by QitsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"mac", "commit"=>"Search"}
+  [1m[36mQit Load (0.8ms)[0m  [1mSELECT  "qits".* FROM "qits" WHERE (item LIKE '%MAC%')  ORDER BY created_at DESC LIMIT 6 OFFSET 0[0m
+  Rendered qits/_qit.html.erb (0.4ms)
+  Rendered qits/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 71ms (Views: 68.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-09-21 23:41:05 +0530
+Processing by QitsController#index as HTML
+  [1m[35mQit Load (1.0ms)[0m  SELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0
+  [1m[36m (1.1ms)[0m  [1mSELECT COUNT(*) FROM "qits"[0m
+  Rendered qits/_qit.html.erb (0.9ms)
+  Rendered qits/index.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 100ms (Views: 95.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/qits?utf8=%E2%9C%93&search=mac&commit=Search" for ::1 at 2016-09-21 23:41:10 +0530
+Processing by QitsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"mac", "commit"=>"Search"}
+  [1m[35mQit Load (1.8ms)[0m  SELECT  "qits".* FROM "qits" WHERE (item LIKE '%MAC%')  ORDER BY created_at DESC LIMIT 6 OFFSET 0
+  Rendered qits/_qit.html.erb (0.5ms)
+  Rendered qits/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 121ms (Views: 116.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2016-09-21 23:41:14 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (0.8ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/_qit.html.erb (0.2ms)
+  Rendered qits/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 107ms (Views: 86.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/qits/new" for ::1 at 2016-09-21 23:41:19 +0530
+Processing by QitsController#new as HTML
+  Rendered qits/new.html.erb within layouts/application (137.7ms)
+Completed 200 OK in 219ms (Views: 215.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/qits" for ::1 at 2016-09-21 23:41:43 +0530
+Processing by QitsController#create as HTML
+  Parameters: {"utf8"=>"✓", "qit"=>{"borrower_id"=>"qt1060", "borrower"=>"c", "item"=>"Mac OS", "item_id"=>"1121000031", "borrowed_on(1i)"=>"2016", "borrowed_on(2i)"=>"9", "borrowed_on(3i)"=>"21", "returned_on(1i)"=>"2016", "returned_on(2i)"=>"9", "returned_on(3i)"=>"21", "item_status"=>"BORROWED", "issue"=>"battery problem", "incharge"=>"MANJUNATH DINKA"}, "commit"=>"Submit"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mQit Exists (1.8ms)[0m  SELECT  1 AS one FROM "qits" WHERE "qits"."borrower_id" = 'qt1060' LIMIT 1
+  [1m[36mQit Exists (1.3ms)[0m  [1mSELECT  1 AS one FROM "qits" WHERE "qits"."item_id" = '1121000031' LIMIT 1[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "qits" ("borrower_id", "borrower", "item", "item_id", "item_status", "incharge", "issue", "borrowed_on", "returned_on", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["borrower_id", "qt1060"], ["borrower", "c"], ["item", "Mac OS"], ["item_id", "1121000031"], ["item_status", "BORROWED"], ["incharge", "MANJUNATH DINKA"], ["issue", "battery problem"], ["borrowed_on", "2016-09-21"], ["returned_on", "2016-09-21"], ["created_at", "2016-09-21 18:11:43.349466"], ["updated_at", "2016-09-21 18:11:43.349466"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mQit Exists (0.9ms)[0m  [1mSELECT  1 AS one FROM "qits" WHERE ("qits"."borrower_id" = 'QT1060' AND "qits"."id" != 22) LIMIT 1[0m
+  [1m[35mQit Exists (0.9ms)[0m  SELECT  1 AS one FROM "qits" WHERE ("qits"."item_id" = '1121000031' AND "qits"."id" != 22) LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "qits" SET "borrower_id" = $1, "borrower" = $2, "item" = $3, "issue" = $4, "returned_on" = $5, "updated_at" = $6 WHERE "qits"."id" = $7[0m  [["borrower_id", "QT1060"], ["borrower", "C"], ["item", "MAC OS"], ["issue", "BATTERY PROBLEM"], ["returned_on", nil], ["updated_at", "2016-09-21 18:11:43.368829"], ["id", 22]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 104ms (ActiveRecord: 10.3ms)
+
+
+Started GET "/" for ::1 at 2016-09-21 23:41:43 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (0.9ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/_qit.html.erb (0.2ms)
+  Rendered qits/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 101ms (Views: 97.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/qits/new" for ::1 at 2016-09-21 23:41:49 +0530
+Processing by QitsController#new as HTML
+  Rendered qits/new.html.erb within layouts/application (38.3ms)
+Completed 200 OK in 119ms (Views: 116.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/qits" for ::1 at 2016-09-21 23:42:08 +0530
+Processing by QitsController#create as HTML
+  Parameters: {"utf8"=>"✓", "qit"=>{"borrower_id"=>"qt1061", "borrower"=>"da", "item"=>"Mac OS", "item_id"=>"11210000asad", "borrowed_on(1i)"=>"2016", "borrowed_on(2i)"=>"9", "borrowed_on(3i)"=>"21", "returned_on(1i)"=>"2016", "returned_on(2i)"=>"9", "returned_on(3i)"=>"21", "item_status"=>"BORROWED", "issue"=>"battery problem", "incharge"=>"MANJUNATH DINKA"}, "commit"=>"Submit"}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mQit Exists (1.2ms)[0m  SELECT  1 AS one FROM "qits" WHERE "qits"."borrower_id" = 'qt1061' LIMIT 1
+  [1m[36mQit Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "qits" WHERE "qits"."item_id" = '11210000asad' LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "qits" ("borrower_id", "borrower", "item", "item_id", "item_status", "incharge", "issue", "borrowed_on", "returned_on", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["borrower_id", "qt1061"], ["borrower", "da"], ["item", "Mac OS"], ["item_id", "11210000asad"], ["item_status", "BORROWED"], ["incharge", "MANJUNATH DINKA"], ["issue", "battery problem"], ["borrowed_on", "2016-09-21"], ["returned_on", "2016-09-21"], ["created_at", "2016-09-21 18:12:08.279291"], ["updated_at", "2016-09-21 18:12:08.279291"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mQit Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "qits" WHERE ("qits"."borrower_id" = 'QT1061' AND "qits"."id" != 23) LIMIT 1[0m
+  [1m[35mQit Exists (0.8ms)[0m  SELECT  1 AS one FROM "qits" WHERE ("qits"."item_id" = '11210000ASAD' AND "qits"."id" != 23) LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "qits" SET "borrower_id" = $1, "borrower" = $2, "item" = $3, "item_id" = $4, "issue" = $5, "returned_on" = $6, "updated_at" = $7 WHERE "qits"."id" = $8[0m  [["borrower_id", "QT1061"], ["borrower", "DA"], ["item", "MAC OS"], ["item_id", "11210000ASAD"], ["issue", "BATTERY PROBLEM"], ["returned_on", nil], ["updated_at", "2016-09-21 18:12:08.295020"], ["id", 23]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 39ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/" for ::1 at 2016-09-21 23:42:08 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (1.3ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  [1m[35m (1.2ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/_qit.html.erb (0.3ms)
+  Rendered qits/index.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 147ms (Views: 142.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/qits/new" for ::1 at 2016-09-21 23:42:12 +0530
+Processing by QitsController#new as HTML
+  Rendered qits/new.html.erb within layouts/application (39.8ms)
+Completed 200 OK in 119ms (Views: 117.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/qits" for ::1 at 2016-09-21 23:42:35 +0530
+Processing by QitsController#create as HTML
+  Parameters: {"utf8"=>"✓", "qit"=>{"borrower_id"=>"QT1062", "borrower"=>"adasd", "item"=>"Mac OS", "item_id"=>"11210000aww", "borrowed_on(1i)"=>"2016", "borrowed_on(2i)"=>"9", "borrowed_on(3i)"=>"21", "returned_on(1i)"=>"2016", "returned_on(2i)"=>"9", "returned_on(3i)"=>"21", "item_status"=>"BORROWED", "issue"=>"Nothing", "incharge"=>"MANJUNATH DINKA"}, "commit"=>"Submit"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mQit Exists (0.9ms)[0m  SELECT  1 AS one FROM "qits" WHERE "qits"."borrower_id" = 'QT1062' LIMIT 1
+  [1m[36mQit Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "qits" WHERE "qits"."item_id" = '11210000aww' LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "qits" ("borrower_id", "borrower", "item", "item_id", "item_status", "incharge", "issue", "borrowed_on", "returned_on", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["borrower_id", "QT1062"], ["borrower", "adasd"], ["item", "Mac OS"], ["item_id", "11210000aww"], ["item_status", "BORROWED"], ["incharge", "MANJUNATH DINKA"], ["issue", "Nothing"], ["borrowed_on", "2016-09-21"], ["returned_on", "2016-09-21"], ["created_at", "2016-09-21 18:12:35.408855"], ["updated_at", "2016-09-21 18:12:35.408855"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mQit Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "qits" WHERE ("qits"."borrower_id" = 'QT1062' AND "qits"."id" != 24) LIMIT 1[0m
+  [1m[35mQit Exists (0.8ms)[0m  SELECT  1 AS one FROM "qits" WHERE ("qits"."item_id" = '11210000AWW' AND "qits"."id" != 24) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "qits" SET "borrower" = $1, "item" = $2, "item_id" = $3, "issue" = $4, "returned_on" = $5, "updated_at" = $6 WHERE "qits"."id" = $7[0m  [["borrower", "ADASD"], ["item", "MAC OS"], ["item_id", "11210000AWW"], ["issue", "NOTHING"], ["returned_on", nil], ["updated_at", "2016-09-21 18:12:35.422775"], ["id", 24]]
+  [1m[35m (0.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 32ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/" for ::1 at 2016-09-21 23:42:35 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (1.4ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/_qit.html.erb (0.3ms)
+  Rendered qits/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 101ms (Views: 96.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/qits?utf8=%E2%9C%93&search=mac&commit=Search" for ::1 at 2016-09-21 23:42:41 +0530
+Processing by QitsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"mac", "commit"=>"Search"}
+  [1m[36mQit Load (0.9ms)[0m  [1mSELECT  "qits".* FROM "qits" WHERE (item LIKE '%MAC%')  ORDER BY created_at DESC LIMIT 6 OFFSET 0[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "qits" WHERE (item LIKE '%MAC%')
+  Rendered qits/_qit.html.erb (0.2ms)
+  Rendered qits/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 75ms (Views: 71.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/qits/new" for ::1 at 2016-09-21 23:42:45 +0530
+Processing by QitsController#new as HTML
+  Rendered qits/new.html.erb within layouts/application (49.2ms)
+Completed 200 OK in 129ms (Views: 125.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/qits" for ::1 at 2016-09-21 23:43:00 +0530
+Processing by QitsController#create as HTML
+  Parameters: {"utf8"=>"✓", "qit"=>{"borrower_id"=>"qt1065", "borrower"=>"asdasd", "item"=>"Mac OS", "item_id"=>"11212121awqe", "borrowed_on(1i)"=>"2016", "borrowed_on(2i)"=>"9", "borrowed_on(3i)"=>"21", "returned_on(1i)"=>"2016", "returned_on(2i)"=>"9", "returned_on(3i)"=>"21", "item_status"=>"BORROWED", "issue"=>"Nothing", "incharge"=>"MANJUNATH DINKA"}, "commit"=>"Submit"}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mQit Exists (0.8ms)[0m  SELECT  1 AS one FROM "qits" WHERE "qits"."borrower_id" = 'qt1065' LIMIT 1
+  [1m[36mQit Exists (0.9ms)[0m  [1mSELECT  1 AS one FROM "qits" WHERE "qits"."item_id" = '11212121awqe' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "qits" ("borrower_id", "borrower", "item", "item_id", "item_status", "incharge", "issue", "borrowed_on", "returned_on", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["borrower_id", "qt1065"], ["borrower", "asdasd"], ["item", "Mac OS"], ["item_id", "11212121awqe"], ["item_status", "BORROWED"], ["incharge", "MANJUNATH DINKA"], ["issue", "Nothing"], ["borrowed_on", "2016-09-21"], ["returned_on", "2016-09-21"], ["created_at", "2016-09-21 18:13:00.387625"], ["updated_at", "2016-09-21 18:13:00.387625"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mQit Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "qits" WHERE ("qits"."borrower_id" = 'QT1065' AND "qits"."id" != 25) LIMIT 1[0m
+  [1m[35mQit Exists (0.6ms)[0m  SELECT  1 AS one FROM "qits" WHERE ("qits"."item_id" = '11212121AWQE' AND "qits"."id" != 25) LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "qits" SET "borrower_id" = $1, "borrower" = $2, "item" = $3, "item_id" = $4, "issue" = $5, "returned_on" = $6, "updated_at" = $7 WHERE "qits"."id" = $8[0m  [["borrower_id", "QT1065"], ["borrower", "ASDASD"], ["item", "MAC OS"], ["item_id", "11212121AWQE"], ["issue", "NOTHING"], ["returned_on", nil], ["updated_at", "2016-09-21 18:13:00.400602"], ["id", 25]]
+  [1m[35m (0.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 32ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/" for ::1 at 2016-09-21 23:43:00 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (0.9ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/_qit.html.erb (0.3ms)
+  Rendered qits/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 101ms (Views: 96.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/qits?utf8=%E2%9C%93&search=mac&commit=Search" for ::1 at 2016-09-21 23:43:09 +0530
+Processing by QitsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"mac", "commit"=>"Search"}
+  [1m[36mQit Load (1.6ms)[0m  [1mSELECT  "qits".* FROM "qits" WHERE (item LIKE '%MAC%')  ORDER BY created_at DESC LIMIT 6 OFFSET 0[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "qits" WHERE (item LIKE '%MAC%')
+  Rendered qits/_qit.html.erb (0.2ms)
+  Rendered qits/index.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 92ms (Views: 87.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/qits?commit=Search&page=2&search=mac&utf8=%E2%9C%93" for ::1 at 2016-09-21 23:43:14 +0530
+Processing by QitsController#index as HTML
+  Parameters: {"commit"=>"Search", "page"=>"2", "search"=>"mac", "utf8"=>"✓"}
+  [1m[36mQit Load (1.7ms)[0m  [1mSELECT  "qits".* FROM "qits" WHERE (item LIKE '%MAC%')  ORDER BY created_at DESC LIMIT 6 OFFSET 6[0m
+  Rendered qits/_qit.html.erb (0.3ms)
+  Rendered qits/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 122ms (Views: 117.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/qits?commit=Search&page=1&search=mac&utf8=%E2%9C%93" for ::1 at 2016-09-21 23:43:16 +0530
+Processing by QitsController#index as HTML
+  Parameters: {"commit"=>"Search", "page"=>"1", "search"=>"mac", "utf8"=>"✓"}
+  [1m[35mQit Load (1.0ms)[0m  SELECT  "qits".* FROM "qits" WHERE (item LIKE '%MAC%')  ORDER BY created_at DESC LIMIT 6 OFFSET 0
+  [1m[36m (1.5ms)[0m  [1mSELECT COUNT(*) FROM "qits" WHERE (item LIKE '%MAC%')[0m
+  Rendered qits/_qit.html.erb (0.6ms)
+  Rendered qits/index.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 115ms (Views: 109.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/qits/21/edit" for ::1 at 2016-09-21 23:43:23 +0530
+Processing by QitsController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[35mQit Load (2.1ms)[0m  SELECT  "qits".* FROM "qits" WHERE "qits"."id" = $1 LIMIT 1  [["id", 21]]
+  Rendered qits/edit.html.erb within layouts/application (48.9ms)
+Completed 200 OK in 145ms (Views: 128.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/qits" for ::1 at 2016-09-21 23:45:54 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (1.3ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  [1m[35m (1.2ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/_qit.html.erb (0.4ms)
+  Rendered qits/index.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 120ms (Views: 114.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2016-09-21 23:46:03 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (1.3ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/_qit.html.erb (0.4ms)
+  Rendered qits/index.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 109ms (Views: 105.1ms | ActiveRecord: 2.2ms)
+
+
+Started DELETE "/qits/13" for ::1 at 2016-09-21 23:46:11 +0530
+Processing by QitsController#destroy as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mQit Load (0.9ms)[0m  [1mSELECT  "qits".* FROM "qits" WHERE "qits"."id" = $1 LIMIT 1[0m  [["id", 13]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "qits" WHERE "qits"."id" = $1[0m  [["id", 13]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/qits
+Completed 302 Found in 9ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/qits" for ::1 at 2016-09-21 23:46:11 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (1.0ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/_qit.html.erb (0.2ms)
+  Rendered qits/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 76ms (Views: 73.2ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/qits/15" for ::1 at 2016-09-21 23:46:15 +0530
+Processing by QitsController#destroy as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mQit Load (0.6ms)[0m  [1mSELECT  "qits".* FROM "qits" WHERE "qits"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "qits" WHERE "qits"."id" = $1[0m  [["id", 15]]
+  [1m[35m (1.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/qits
+Completed 302 Found in 8ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/qits" for ::1 at 2016-09-21 23:46:15 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (0.9ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/_qit.html.erb (0.2ms)
+  Rendered qits/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 74ms (Views: 71.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/qits" for ::1 at 2016-09-21 23:47:37 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (0.8ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/_qit.html.erb (0.4ms)
+  Rendered qits/index.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 109ms (Views: 105.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/bootstrap.min.self-511807f34f490c5d04f397a2ad4fc4a9135fcb5300f3dd5cb88f1cf678357cf3.css?body=1" for ::1 at 2016-09-21 23:47:37 +0530
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for ::1 at 2016-09-21 23:47:37 +0530
+
+
+Started GET "/assets/qit.self-32a9e214138a5e19b68385a63b2709feffc64429222b28dce18fd3bfca8d859a.css?body=1" for ::1 at 2016-09-21 23:47:37 +0530
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-09-21 23:47:37 +0530
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2016-09-21 23:47:37 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-09-21 23:47:37 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-09-21 23:47:37 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-09-21 23:47:37 +0530
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2016-09-21 23:47:37 +0530
+
+
+Started GET "/assets/qit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-21 23:47:37 +0530
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-09-21 23:47:37 +0530
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "qits"[0m
+
+
+Started GET "/" for ::1 at 2016-09-21 23:50:04 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (1.3ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  [1m[35m (1.1ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/_qit.html.erb (0.2ms)
+  Rendered qits/index.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 180ms (Views: 172.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2016-09-21 23:50:07 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (1.1ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/_qit.html.erb (0.2ms)
+  Rendered qits/index.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 108ms (Views: 102.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2016-09-21 23:51:01 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (0.8ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/_qit.html.erb (0.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "qits"[0m
+  Rendered qits/index.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 86ms (Views: 82.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/qit.self-32a9e214138a5e19b68385a63b2709feffc64429222b28dce18fd3bfca8d859a.css?body=1" for ::1 at 2016-09-21 23:51:01 +0530
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for ::1 at 2016-09-21 23:51:01 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-09-21 23:51:01 +0530
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-09-21 23:51:01 +0530
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2016-09-21 23:51:01 +0530
+
+
+Started GET "/assets/bootstrap.min.self-511807f34f490c5d04f397a2ad4fc4a9135fcb5300f3dd5cb88f1cf678357cf3.css?body=1" for ::1 at 2016-09-21 23:51:01 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-09-21 23:51:01 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-09-21 23:51:01 +0530
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2016-09-21 23:51:01 +0530
+
+
+Started GET "/assets/qit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-21 23:51:01 +0530
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-09-21 23:51:01 +0530
+
+
+Started GET "/" for ::1 at 2016-09-21 23:52:24 +0530
+Processing by QitsController#index as HTML
+  [1m[35mQit Load (1.3ms)[0m  SELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "qits"[0m
+  Rendered qits/_qit.html.erb (0.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/index.html.erb within layouts/application (35.4ms)
+Completed 200 OK in 121ms (Views: 116.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/bootstrap.min.self-511807f34f490c5d04f397a2ad4fc4a9135fcb5300f3dd5cb88f1cf678357cf3.css?body=1" for ::1 at 2016-09-21 23:52:24 +0530
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for ::1 at 2016-09-21 23:52:24 +0530
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-09-21 23:52:24 +0530
+
+
+Started GET "/assets/qit.self-32a9e214138a5e19b68385a63b2709feffc64429222b28dce18fd3bfca8d859a.css?body=1" for ::1 at 2016-09-21 23:52:24 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-09-21 23:52:24 +0530
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2016-09-21 23:52:24 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-09-21 23:52:24 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-09-21 23:52:24 +0530
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2016-09-21 23:52:24 +0530
+
+
+Started GET "/assets/qit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-21 23:52:24 +0530
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-09-21 23:52:24 +0530
+
+
+Started GET "/" for ::1 at 2016-09-21 23:53:01 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (1.1ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  [1m[35m (1.1ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/_qit.html.erb (0.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "qits"[0m
+  Rendered qits/index.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 88ms (Views: 83.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/bootstrap.min.self-511807f34f490c5d04f397a2ad4fc4a9135fcb5300f3dd5cb88f1cf678357cf3.css?body=1" for ::1 at 2016-09-21 23:53:02 +0530
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for ::1 at 2016-09-21 23:53:02 +0530
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2016-09-21 23:53:02 +0530
+
+
+Started GET "/assets/qit.self-32a9e214138a5e19b68385a63b2709feffc64429222b28dce18fd3bfca8d859a.css?body=1" for ::1 at 2016-09-21 23:53:02 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-09-21 23:53:02 +0530
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-09-21 23:53:02 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-09-21 23:53:02 +0530
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2016-09-21 23:53:02 +0530
+
+
+Started GET "/assets/qit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-21 23:53:02 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-09-21 23:53:02 +0530
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-09-21 23:53:02 +0530
+
+
+Started GET "/" for ::1 at 2016-09-21 23:54:19 +0530
+Processing by QitsController#index as HTML
+  [1m[35mQit Load (1.1ms)[0m  SELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "qits"[0m
+  Rendered qits/_qit.html.erb (0.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/index.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 148ms (Views: 143.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/bootstrap.min.self-511807f34f490c5d04f397a2ad4fc4a9135fcb5300f3dd5cb88f1cf678357cf3.css?body=1" for ::1 at 2016-09-21 23:54:20 +0530
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for ::1 at 2016-09-21 23:54:20 +0530
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-09-21 23:54:20 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-09-21 23:54:20 +0530
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2016-09-21 23:54:20 +0530
+
+
+Started GET "/assets/qit.self-32a9e214138a5e19b68385a63b2709feffc64429222b28dce18fd3bfca8d859a.css?body=1" for ::1 at 2016-09-21 23:54:20 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-09-21 23:54:20 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-09-21 23:54:20 +0530
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2016-09-21 23:54:20 +0530
+
+
+Started GET "/assets/qit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-21 23:54:20 +0530
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-09-21 23:54:20 +0530
+
+
+Started GET "/qits?utf8=%E2%9C%93&search=DONGLE&commit=Search" for ::1 at 2016-09-21 23:54:43 +0530
+Processing by QitsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"DONGLE", "commit"=>"Search"}
+  [1m[36mQit Load (2.1ms)[0m  [1mSELECT  "qits".* FROM "qits" WHERE (item LIKE '%DONGLE%')  ORDER BY created_at DESC LIMIT 6 OFFSET 0[0m
+  Rendered qits/_qit.html.erb (0.2ms)
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 119ms (Views: 112.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2016-09-21 23:54:49 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (0.9ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/_qit.html.erb (0.2ms)
+  [1m[36mCACHE (0.3ms)[0m  [1mSELECT COUNT(*) FROM "qits"[0m
+  Rendered qits/index.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 127ms (Views: 122.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2016-09-21 23:55:20 +0530
+Processing by QitsController#index as HTML
+  [1m[35mQit Load (1.1ms)[0m  SELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "qits"[0m
+  Rendered qits/_qit.html.erb (0.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/index.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 128ms (Views: 122.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/bootstrap.min.self-511807f34f490c5d04f397a2ad4fc4a9135fcb5300f3dd5cb88f1cf678357cf3.css?body=1" for ::1 at 2016-09-21 23:55:20 +0530
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-09-21 23:55:20 +0530
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for ::1 at 2016-09-21 23:55:20 +0530
+
+
+Started GET "/assets/qit.self-32a9e214138a5e19b68385a63b2709feffc64429222b28dce18fd3bfca8d859a.css?body=1" for ::1 at 2016-09-21 23:55:20 +0530
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2016-09-21 23:55:20 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-09-21 23:55:20 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-09-21 23:55:20 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-09-21 23:55:20 +0530
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2016-09-21 23:55:20 +0530
+
+
+Started GET "/assets/qit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-21 23:55:20 +0530
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-09-21 23:55:20 +0530
+
+
+Started GET "/" for ::1 at 2016-09-21 23:55:44 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (0.9ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/_qit.html.erb (0.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "qits"[0m
+  Rendered qits/index.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 90ms (Views: 86.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/bootstrap.min.self-511807f34f490c5d04f397a2ad4fc4a9135fcb5300f3dd5cb88f1cf678357cf3.css?body=1" for ::1 at 2016-09-21 23:55:44 +0530
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for ::1 at 2016-09-21 23:55:44 +0530
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-09-21 23:55:44 +0530
+
+
+Started GET "/assets/qit.self-32a9e214138a5e19b68385a63b2709feffc64429222b28dce18fd3bfca8d859a.css?body=1" for ::1 at 2016-09-21 23:55:44 +0530
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2016-09-21 23:55:44 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-09-21 23:55:45 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-09-21 23:55:45 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-09-21 23:55:45 +0530
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2016-09-21 23:55:45 +0530
+
+
+Started GET "/assets/qit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-21 23:55:45 +0530
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-09-21 23:55:45 +0530
+
+
+Started GET "/" for ::1 at 2016-09-21 23:56:03 +0530
+Processing by QitsController#index as HTML
+  [1m[35mQit Load (1.2ms)[0m  SELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "qits"[0m
+  Rendered qits/_qit.html.erb (0.6ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/index.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 126ms (Views: 121.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for ::1 at 2016-09-21 23:56:03 +0530
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-09-21 23:56:03 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-09-21 23:56:03 +0530
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2016-09-21 23:56:03 +0530
+
+
+Started GET "/assets/bootstrap.min.self-511807f34f490c5d04f397a2ad4fc4a9135fcb5300f3dd5cb88f1cf678357cf3.css?body=1" for ::1 at 2016-09-21 23:56:03 +0530
+
+
+Started GET "/assets/qit.self-32a9e214138a5e19b68385a63b2709feffc64429222b28dce18fd3bfca8d859a.css?body=1" for ::1 at 2016-09-21 23:56:03 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-09-21 23:56:03 +0530
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-09-21 23:56:03 +0530
+
+
+Started GET "/assets/qit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-21 23:56:03 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-09-21 23:56:03 +0530
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2016-09-21 23:56:03 +0530
+
+
+Started GET "/" for ::1 at 2016-09-21 23:56:16 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (1.2ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  [1m[35m (1.1ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/_qit.html.erb (0.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "qits"[0m
+  Rendered qits/index.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 118ms (Views: 114.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-09-21 23:56:16 +0530
+
+
+Started GET "/assets/qit.self-32a9e214138a5e19b68385a63b2709feffc64429222b28dce18fd3bfca8d859a.css?body=1" for ::1 at 2016-09-21 23:56:16 +0530
+
+
+Started GET "/assets/bootstrap.min.self-511807f34f490c5d04f397a2ad4fc4a9135fcb5300f3dd5cb88f1cf678357cf3.css?body=1" for ::1 at 2016-09-21 23:56:16 +0530
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2016-09-21 23:56:16 +0530
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for ::1 at 2016-09-21 23:56:16 +0530
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-09-21 23:56:16 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-09-21 23:56:16 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-09-21 23:56:16 +0530
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2016-09-21 23:56:16 +0530
+
+
+Started GET "/assets/qit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-21 23:56:16 +0530
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-09-21 23:56:16 +0530
+
+
+Started GET "/" for ::1 at 2016-09-21 23:56:44 +0530
+Processing by QitsController#index as HTML
+  [1m[35mQit Load (1.3ms)[0m  SELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0
+  [1m[36m (1.7ms)[0m  [1mSELECT COUNT(*) FROM "qits"[0m
+  Rendered qits/_qit.html.erb (0.3ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/index.html.erb within layouts/application (36.8ms)
+Completed 200 OK in 136ms (Views: 130.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for ::1 at 2016-09-21 23:56:44 +0530
+
+
+Started GET "/assets/bootstrap.min.self-511807f34f490c5d04f397a2ad4fc4a9135fcb5300f3dd5cb88f1cf678357cf3.css?body=1" for ::1 at 2016-09-21 23:56:44 +0530
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-09-21 23:56:44 +0530
+
+
+Started GET "/assets/qit.self-32a9e214138a5e19b68385a63b2709feffc64429222b28dce18fd3bfca8d859a.css?body=1" for ::1 at 2016-09-21 23:56:44 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-09-21 23:56:44 +0530
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2016-09-21 23:56:44 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-09-21 23:56:44 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-09-21 23:56:44 +0530
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2016-09-21 23:56:44 +0530
+
+
+Started GET "/assets/qit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-21 23:56:44 +0530
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-09-21 23:56:44 +0530
+
+
+Started GET "/" for ::1 at 2016-09-21 23:57:00 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (0.9ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/_qit.html.erb (0.3ms)
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT COUNT(*) FROM "qits"[0m
+  Rendered qits/index.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 122ms (Views: 117.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for ::1 at 2016-09-21 23:57:01 +0530
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-09-21 23:57:01 +0530
+
+
+Started GET "/assets/qit.self-32a9e214138a5e19b68385a63b2709feffc64429222b28dce18fd3bfca8d859a.css?body=1" for ::1 at 2016-09-21 23:57:01 +0530
+
+
+Started GET "/assets/bootstrap.min.self-511807f34f490c5d04f397a2ad4fc4a9135fcb5300f3dd5cb88f1cf678357cf3.css?body=1" for ::1 at 2016-09-21 23:57:01 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-09-21 23:57:01 +0530
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2016-09-21 23:57:01 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-09-21 23:57:01 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-09-21 23:57:01 +0530
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2016-09-21 23:57:01 +0530
+
+
+Started GET "/assets/qit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-21 23:57:01 +0530
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-09-21 23:57:01 +0530
+
+
+Started GET "/qits/new" for ::1 at 2016-09-21 23:57:09 +0530
+Processing by QitsController#new as HTML
+  Rendered qits/new.html.erb within layouts/application (64.1ms)
+Completed 200 OK in 168ms (Views: 165.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/qits/new" for ::1 at 2016-09-21 23:57:37 +0530
+Processing by QitsController#new as HTML
+  Rendered qits/new.html.erb within layouts/application (41.3ms)
+Completed 200 OK in 115ms (Views: 113.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.self-511807f34f490c5d04f397a2ad4fc4a9135fcb5300f3dd5cb88f1cf678357cf3.css?body=1" for ::1 at 2016-09-21 23:57:37 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-09-21 23:57:37 +0530
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for ::1 at 2016-09-21 23:57:37 +0530
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-09-21 23:57:37 +0530
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2016-09-21 23:57:37 +0530
+
+
+Started GET "/assets/qit.self-32a9e214138a5e19b68385a63b2709feffc64429222b28dce18fd3bfca8d859a.css?body=1" for ::1 at 2016-09-21 23:57:37 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-09-21 23:57:37 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-09-21 23:57:37 +0530
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2016-09-21 23:57:38 +0530
+
+
+Started GET "/assets/qit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-21 23:57:38 +0530
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-09-21 23:57:38 +0530
+
+
+Started GET "/qits" for ::1 at 2016-09-21 23:57:40 +0530
+Processing by QitsController#index as HTML
+  [1m[35mQit Load (1.0ms)[0m  SELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0
+  [1m[36m (2.5ms)[0m  [1mSELECT COUNT(*) FROM "qits"[0m
+  Rendered qits/_qit.html.erb (1.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/index.html.erb within layouts/application (35.9ms)
+Completed 200 OK in 133ms (Views: 124.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/qits/new" for ::1 at 2016-09-21 23:57:43 +0530
+Processing by QitsController#new as HTML
+  Rendered qits/new.html.erb within layouts/application (97.9ms)
+Completed 200 OK in 180ms (Views: 177.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/qits" for ::1 at 2016-09-21 23:58:02 +0530
+Processing by QitsController#create as HTML
+  Parameters: {"utf8"=>"✓", "qit"=>{"borrower_id"=>"qt1099", "borrower"=>"eqwe", "item"=>"Mac OS", "item_id"=>"11210000aqe", "borrowed_on(1i)"=>"2016", "borrowed_on(2i)"=>"9", "borrowed_on(3i)"=>"21", "returned_on(1i)"=>"2016", "returned_on(2i)"=>"9", "returned_on(3i)"=>"21", "item_status"=>"BORROWED", "issue"=>"battery problem", "incharge"=>"MANJUNATH DINKA"}, "commit"=>"Submit"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mQit Exists (0.7ms)[0m  SELECT  1 AS one FROM "qits" WHERE "qits"."borrower_id" = 'qt1099' LIMIT 1
+  [1m[36mQit Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "qits" WHERE "qits"."item_id" = '11210000aqe' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "qits" ("borrower_id", "borrower", "item", "item_id", "item_status", "incharge", "issue", "borrowed_on", "returned_on", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["borrower_id", "qt1099"], ["borrower", "eqwe"], ["item", "Mac OS"], ["item_id", "11210000aqe"], ["item_status", "BORROWED"], ["incharge", "MANJUNATH DINKA"], ["issue", "battery problem"], ["borrowed_on", "2016-09-21"], ["returned_on", "2016-09-21"], ["created_at", "2016-09-21 18:28:02.486702"], ["updated_at", "2016-09-21 18:28:02.486702"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mQit Exists (0.9ms)[0m  [1mSELECT  1 AS one FROM "qits" WHERE ("qits"."borrower_id" = 'QT1099' AND "qits"."id" != 26) LIMIT 1[0m
+  [1m[35mQit Exists (0.9ms)[0m  SELECT  1 AS one FROM "qits" WHERE ("qits"."item_id" = '11210000AQE' AND "qits"."id" != 26) LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "qits" SET "borrower_id" = $1, "borrower" = $2, "item" = $3, "item_id" = $4, "issue" = $5, "returned_on" = $6, "updated_at" = $7 WHERE "qits"."id" = $8[0m  [["borrower_id", "QT1099"], ["borrower", "EQWE"], ["item", "MAC OS"], ["item_id", "11210000AQE"], ["issue", "BATTERY PROBLEM"], ["returned_on", nil], ["updated_at", "2016-09-21 18:28:02.503346"], ["id", 26]]
+  [1m[35m (0.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 34ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/" for ::1 at 2016-09-21 23:58:02 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (2.7ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/_qit.html.erb (0.4ms)
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT COUNT(*) FROM "qits"[0m
+  Rendered qits/index.html.erb within layouts/application (38.8ms)
+Completed 200 OK in 152ms (Views: 146.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for ::1 at 2016-09-21 23:58:12 +0530
+Processing by QitsController#index as HTML
+  [1m[35mQit Load (1.1ms)[0m  SELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "qits"[0m
+  Rendered qits/_qit.html.erb (0.4ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/index.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 153ms (Views: 147.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2016-09-21 23:58:14 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (1.1ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  [1m[35m (2.6ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/_qit.html.erb (0.2ms)
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT COUNT(*) FROM "qits"[0m
+  Rendered qits/index.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 186ms (Views: 179.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/qits?utf8=%E2%9C%93&search=VIDWATH&commit=Search" for ::1 at 2016-09-21 23:58:19 +0530
+Processing by QitsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"VIDWATH", "commit"=>"Search"}
+  [1m[35mQit Load (0.9ms)[0m  SELECT  "qits".* FROM "qits" WHERE (item LIKE '%VIDWATH%')  ORDER BY created_at DESC LIMIT 6 OFFSET 0
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "qits"[0m
+  Rendered qits/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 75ms (Views: 70.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2016-09-21 23:58:30 +0530
+Processing by QitsController#index as HTML
+  [1m[35mQit Load (1.3ms)[0m  SELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "qits"[0m
+  Rendered qits/_qit.html.erb (0.3ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/index.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 107ms (Views: 102.1ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/qits/26" for ::1 at 2016-09-21 23:58:34 +0530
+Processing by QitsController#destroy as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mQit Load (2.2ms)[0m  [1mSELECT  "qits".* FROM "qits" WHERE "qits"."id" = $1 LIMIT 1[0m  [["id", 26]]
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "qits" WHERE "qits"."id" = $1[0m  [["id", 26]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/qits
+Completed 302 Found in 12ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/qits" for ::1 at 2016-09-21 23:58:34 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (0.8ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/_qit.html.erb (0.3ms)
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT COUNT(*) FROM "qits"[0m
+  Rendered qits/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 87ms (Views: 83.3ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/qits/14" for ::1 at 2016-09-21 23:58:37 +0530
+Processing by QitsController#destroy as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mQit Load (0.6ms)[0m  SELECT  "qits".* FROM "qits" WHERE "qits"."id" = $1 LIMIT 1  [["id", 14]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "qits" WHERE "qits"."id" = $1  [["id", 14]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/qits
+Completed 302 Found in 7ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/qits" for ::1 at 2016-09-21 23:58:37 +0530
+Processing by QitsController#index as HTML
+  [1m[35mQit Load (1.0ms)[0m  SELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "qits"[0m
+  Rendered qits/_qit.html.erb (0.5ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/index.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 84ms (Views: 81.3ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/qits/16" for ::1 at 2016-09-21 23:58:40 +0530
+Processing by QitsController#destroy as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mQit Load (1.0ms)[0m  [1mSELECT  "qits".* FROM "qits" WHERE "qits"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "qits" WHERE "qits"."id" = $1[0m  [["id", 16]]
+  [1m[35m (1.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/qits
+Completed 302 Found in 10ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/qits" for ::1 at 2016-09-21 23:58:40 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (1.2ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/_qit.html.erb (0.4ms)
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT COUNT(*) FROM "qits"[0m
+  Rendered qits/index.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 124ms (Views: 119.3ms | ActiveRecord: 2.2ms)
+
+
+Started DELETE "/qits/17" for ::1 at 2016-09-21 23:58:42 +0530
+Processing by QitsController#destroy as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mQit Load (0.7ms)[0m  SELECT  "qits".* FROM "qits" WHERE "qits"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "qits" WHERE "qits"."id" = $1  [["id", 17]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/qits
+Completed 302 Found in 9ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/qits" for ::1 at 2016-09-21 23:58:42 +0530
+Processing by QitsController#index as HTML
+  [1m[35mQit Load (1.0ms)[0m  SELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "qits"[0m
+  Rendered qits/_qit.html.erb (1.1ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/index.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 138ms (Views: 133.7ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/qits/18" for ::1 at 2016-09-21 23:58:45 +0530
+Processing by QitsController#destroy as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mQit Load (0.5ms)[0m  [1mSELECT  "qits".* FROM "qits" WHERE "qits"."id" = $1 LIMIT 1[0m  [["id", 18]]
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "qits" WHERE "qits"."id" = $1[0m  [["id", 18]]
+  [1m[35m (0.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/qits
+Completed 302 Found in 8ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/qits" for ::1 at 2016-09-21 23:58:45 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (0.9ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/_qit.html.erb (0.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "qits"[0m
+  Rendered qits/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 80ms (Views: 76.7ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/qits/19" for ::1 at 2016-09-21 23:58:48 +0530
+Processing by QitsController#destroy as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mQit Load (0.5ms)[0m  SELECT  "qits".* FROM "qits" WHERE "qits"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "qits" WHERE "qits"."id" = $1  [["id", 19]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/qits
+Completed 302 Found in 9ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/qits" for ::1 at 2016-09-21 23:58:48 +0530
+Processing by QitsController#index as HTML
+  [1m[35mQit Load (0.8ms)[0m  SELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "qits"[0m
+  Rendered qits/_qit.html.erb (0.3ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 90ms (Views: 86.8ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/qits/20" for ::1 at 2016-09-21 23:58:52 +0530
+Processing by QitsController#destroy as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mQit Load (0.7ms)[0m  [1mSELECT  "qits".* FROM "qits" WHERE "qits"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "qits" WHERE "qits"."id" = $1[0m  [["id", 20]]
+  [1m[35m (0.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/qits
+Completed 302 Found in 10ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/qits" for ::1 at 2016-09-21 23:58:52 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (1.4ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  Rendered qits/_qit.html.erb (0.4ms)
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/index.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 147ms (Views: 143.2ms | ActiveRecord: 2.4ms)
+
+
+Started DELETE "/qits/22" for ::1 at 2016-09-21 23:58:54 +0530
+Processing by QitsController#destroy as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mQit Load (0.5ms)[0m  [1mSELECT  "qits".* FROM "qits" WHERE "qits"."id" = $1 LIMIT 1[0m  [["id", 22]]
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "qits" WHERE "qits"."id" = $1[0m  [["id", 22]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/qits
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/qits" for ::1 at 2016-09-21 23:58:54 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (0.8ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  Rendered qits/_qit.html.erb (0.3ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 75ms (Views: 71.6ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/qits/23" for ::1 at 2016-09-21 23:58:57 +0530
+Processing by QitsController#destroy as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mQit Load (0.6ms)[0m  [1mSELECT  "qits".* FROM "qits" WHERE "qits"."id" = $1 LIMIT 1[0m  [["id", 23]]
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "qits" WHERE "qits"."id" = $1[0m  [["id", 23]]
+  [1m[35m (0.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/qits
+Completed 302 Found in 7ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/qits" for ::1 at 2016-09-21 23:58:57 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (0.7ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  Rendered qits/_qit.html.erb (0.1ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 87ms (Views: 83.9ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/qits/21" for ::1 at 2016-09-21 23:59:00 +0530
+Processing by QitsController#destroy as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mQit Load (0.4ms)[0m  [1mSELECT  "qits".* FROM "qits" WHERE "qits"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "qits" WHERE "qits"."id" = $1[0m  [["id", 21]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/qits
+Completed 302 Found in 7ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/qits" for ::1 at 2016-09-21 23:59:00 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (0.9ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  Rendered qits/_qit.html.erb (0.1ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 78ms (Views: 74.2ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/qits/25" for ::1 at 2016-09-21 23:59:03 +0530
+Processing by QitsController#destroy as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mQit Load (0.6ms)[0m  [1mSELECT  "qits".* FROM "qits" WHERE "qits"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "qits" WHERE "qits"."id" = $1[0m  [["id", 25]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/qits
+Completed 302 Found in 8ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/qits" for ::1 at 2016-09-21 23:59:03 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (0.8ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  Rendered qits/_qit.html.erb (0.1ms)
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 76ms (Views: 72.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/qits" for ::1 at 2016-09-21 23:59:42 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (1.1ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/_qit.html.erb (0.3ms)
+  Rendered qits/index.html.erb within layouts/application (24.6ms)
+Completed 200 OK in 117ms (Views: 113.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/bootstrap.min.self-511807f34f490c5d04f397a2ad4fc4a9135fcb5300f3dd5cb88f1cf678357cf3.css?body=1" for ::1 at 2016-09-21 23:59:42 +0530
+
+
+Started GET "/assets/qit.self-32a9e214138a5e19b68385a63b2709feffc64429222b28dce18fd3bfca8d859a.css?body=1" for ::1 at 2016-09-21 23:59:42 +0530
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-09-21 23:59:42 +0530
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for ::1 at 2016-09-21 23:59:42 +0530
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2016-09-21 23:59:42 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-09-21 23:59:42 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-09-21 23:59:42 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-09-21 23:59:42 +0530
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2016-09-21 23:59:42 +0530
+
+
+Started GET "/assets/qit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-21 23:59:42 +0530
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-09-21 23:59:42 +0530
+
+
+Started GET "/qits" for ::1 at 2016-09-21 23:59:58 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (1.7ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  [1m[35m (1.2ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/_qit.html.erb (0.2ms)
+  Rendered qits/index.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 148ms (Views: 141.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for ::1 at 2016-09-21 23:59:58 +0530
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2016-09-21 23:59:58 +0530
+
+
+Started GET "/assets/qit.self-32a9e214138a5e19b68385a63b2709feffc64429222b28dce18fd3bfca8d859a.css?body=1" for ::1 at 2016-09-21 23:59:58 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-09-21 23:59:58 +0530
+
+
+Started GET "/assets/bootstrap.min.self-511807f34f490c5d04f397a2ad4fc4a9135fcb5300f3dd5cb88f1cf678357cf3.css?body=1" for ::1 at 2016-09-21 23:59:58 +0530
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-09-21 23:59:58 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-09-21 23:59:58 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-09-21 23:59:58 +0530
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2016-09-21 23:59:58 +0530
+
+
+Started GET "/assets/qit.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-21 23:59:58 +0530
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-09-21 23:59:58 +0530
+
+
+Started GET "/qits?utf8=%E2%9C%93&search=mac&commit=Search" for ::1 at 2016-09-22 00:00:05 +0530
+Processing by QitsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"mac", "commit"=>"Search"}
+  [1m[36mQit Load (0.9ms)[0m  [1mSELECT  "qits".* FROM "qits" WHERE (item LIKE '%MAC%')  ORDER BY created_at DESC LIMIT 6 OFFSET 0[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "qits"
+  Rendered qits/_qit.html.erb (0.1ms)
+  Rendered qits/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 111ms (Views: 105.5ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/qits/24" for ::1 at 2016-09-22 00:00:11 +0530
+Processing by QitsController#destroy as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mQit Load (1.1ms)[0m  [1mSELECT  "qits".* FROM "qits" WHERE "qits"."id" = $1 LIMIT 1[0m  [["id", 24]]
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "qits" WHERE "qits"."id" = $1[0m  [["id", 24]]
+  [1m[35m (0.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/qits
+Completed 302 Found in 10ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/qits" for ::1 at 2016-09-22 00:00:11 +0530
+Processing by QitsController#index as HTML
+  [1m[36mQit Load (0.8ms)[0m  [1mSELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0[0m
+  Rendered qits/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 77ms (Views: 74.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/qits/new" for ::1 at 2016-09-22 00:00:44 +0530
+Processing by QitsController#new as HTML
+  Rendered qits/new.html.erb within layouts/application (39.8ms)
+Completed 200 OK in 150ms (Views: 147.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/qits" for ::1 at 2016-09-22 00:00:55 +0530
+Processing by QitsController#create as HTML
+  Parameters: {"utf8"=>"✓", "qit"=>{"borrower_id"=>"QT1050", "borrower"=>"anup kumar kannur", "item"=>"Windows", "item_id"=>"11212121a", "borrowed_on(1i)"=>"2016", "borrowed_on(2i)"=>"9", "borrowed_on(3i)"=>"21", "returned_on(1i)"=>"2016", "returned_on(2i)"=>"9", "returned_on(3i)"=>"21", "item_status"=>"BORROWED", "issue"=>"battery problem", "incharge"=>"MANJUNATH DINKA"}, "commit"=>"Submit"}
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mQit Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "qits" WHERE "qits"."borrower_id" = 'QT1050' LIMIT 1[0m
+  [1m[35mQit Exists (0.9ms)[0m  SELECT  1 AS one FROM "qits" WHERE "qits"."item_id" = '11212121a' LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "qits" ("borrower_id", "borrower", "item", "item_id", "item_status", "incharge", "issue", "borrowed_on", "returned_on", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["borrower_id", "QT1050"], ["borrower", "anup kumar kannur"], ["item", "Windows"], ["item_id", "11212121a"], ["item_status", "BORROWED"], ["incharge", "MANJUNATH DINKA"], ["issue", "battery problem"], ["borrowed_on", "2016-09-21"], ["returned_on", "2016-09-21"], ["created_at", "2016-09-21 18:30:55.497297"], ["updated_at", "2016-09-21 18:30:55.497297"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (1.2ms)[0m  [1mBEGIN[0m
+  [1m[35mQit Exists (3.3ms)[0m  SELECT  1 AS one FROM "qits" WHERE ("qits"."borrower_id" = 'QT1050' AND "qits"."id" != 27) LIMIT 1
+  [1m[36mQit Exists (1.3ms)[0m  [1mSELECT  1 AS one FROM "qits" WHERE ("qits"."item_id" = '11212121A' AND "qits"."id" != 27) LIMIT 1[0m
+  [1m[35mSQL (3.3ms)[0m  UPDATE "qits" SET "borrower" = $1, "item" = $2, "item_id" = $3, "issue" = $4, "returned_on" = $5, "updated_at" = $6 WHERE "qits"."id" = $7  [["borrower", "ANUP KUMAR KANNUR"], ["item", "WINDOWS"], ["item_id", "11212121A"], ["issue", "BATTERY PROBLEM"], ["returned_on", nil], ["updated_at", "2016-09-21 18:30:55.522550"], ["id", 27]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 56ms (ActiveRecord: 14.6ms)
+
+
+Started GET "/" for ::1 at 2016-09-22 00:00:55 +0530
+Processing by QitsController#index as HTML
+  [1m[35mQit Load (1.5ms)[0m  SELECT  "qits".* FROM "qits" LIMIT 6 OFFSET 0
+  [1m[36m (1.8ms)[0m  [1mSELECT COUNT(*) FROM "qits"[0m
+  Rendered qits/_qit.html.erb (0.4ms)
+  Rendered qits/index.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 141ms (Views: 135.8ms | ActiveRecord: 3.3ms)

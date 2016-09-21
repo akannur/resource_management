@@ -16,11 +16,14 @@
   <%= submit_tag "Search" %>
   <% end %>
   <% if @qits.present? %>
+  <br>
+  <p style="color: green;">Asset Count: <%=Qit.count %></th></p>
   <%= render @qits %>
   <% else %>
   <p>There are no assets containing the term(s) <%= params[:search] %>.</p>
   <% end %>
   <br>
+
   <table class="table table-bordered">
     <thead>
       <tr>
