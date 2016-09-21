@@ -20,7 +20,7 @@
   <% else %>
   <p>There are no assets containing the term(s) <%= params[:search] %>.</p>
   <% end %>
-
+  <br>
   <table class="table table-bordered">
     <thead>
       <tr>
@@ -47,20 +47,17 @@
         <td><%=qit.item_status %></td>
         <td><%=qit.issue %></td>
         <td><%=qit.incharge %></td>
-        <td><%= link_to '<i class="fa fa-trash" aria-hidden="true"></i>
-          '.html_safe, qit_path(qit),
+        <td><%= link_to '<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            '.html_safe, edit_qit_path(qit) %></td>
+        <td><%= button_to 'DELETE', qit_path(qit),
           method: :delete,
           data: { confirm: 'Are You sure?' } %></td>
-          <td><%= link_to '<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-            '.html_safe, edit_qit_path(qit) %></td>
-
-
           </tr>
           <% end %>
         </tbody>
       </table>
       <p><%= link_to "Add Borrower", new_qit_path %></p>
-      <a href="/"><i class="fa fa-refresh" aria-hidden="true" style="color: red"></i></a>
+      <a href="/"><i class="fa fa-arrow-circle-left" aria-hidden="true" style="color: red"></i></a>
       <p><%= will_paginate @qits %></p>
     </div>
     <% end %>

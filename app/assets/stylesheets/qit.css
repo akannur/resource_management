@@ -13,6 +13,12 @@ body {
     padding-right: 184px;
 }
 
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+    color: red;
+}
+
 .alignment-122 label {
     padding-right: 122px;
 }
