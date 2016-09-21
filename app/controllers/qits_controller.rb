@@ -8,6 +8,14 @@ class QitsController < ApplicationController
     end
   end
 
+  def show
+    @qits = Qit.paginate(:page => params[:page])
+    if params[:search]
+      @qits = Qit.all
+      @qits = Qit.search(params[:search]).order("created_at DESC").paginate(:page => params[:page])
+    end
+  end
+
   def new
     @qit = Qit.new
   end
