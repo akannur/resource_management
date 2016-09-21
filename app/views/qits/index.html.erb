@@ -47,7 +47,7 @@
         <td><%=qit.item_status %></td>
         <td><%=qit.issue %></td>
         <td><%=qit.incharge %></td>
-        <td><%= button_to 'Delete
+        <td><%= link_to '<i class="fa fa-trash" aria-hidden="true"></i>
           '.html_safe, qit_path(qit),
           method: :delete,
           data: { confirm: 'Are You sure?' } %></td>
