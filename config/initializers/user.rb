@@ -1,2 +1,2 @@
 USER_ID   = "admin"
-PASSWORD  = "admin"
+PASSWORD  = "adminmysore"
