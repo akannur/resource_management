@@ -1,5 +1,5 @@
 class Qit < ActiveRecord::Base
-  validates :borrower_id, presence: true, uniqueness: true
+  validates :borrower_id, presence: true
   validates :borrower, presence: true
   validates :item, presence: true
   validates :item_id, presence: true, uniqueness: true
