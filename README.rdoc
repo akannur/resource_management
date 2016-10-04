@@ -1,4 +1,32 @@
+URL: https://qwinix-denver.herokuapp.com/
+
+An rails app to maintain Qwinix Denver Assets(Mac/Phones/Cables/Dongle/hdmi/ipads etc..).
+
+
+Browser Authentication:
+
+Username: admin
+Password: admindenver
+
+
+
+How it works?
+
+To add new asset/record: Click on "Add Borrower" link
+
+To edit asset: click on the edit pencil option which is displayed on each record.
+
+To delete asset: click on the delete button which is displayed on each record.
+
+Search Asset: you can always search for asset(for ex: you can search only for "mac" or "iphone5" or etc)
+
+Incharge: this refers to Office Incharge person who is responsible for asset management.
+
+
+
+
 == Reference
+
 
 App:
 https://medium.com/@riklomas/how-to-create-a-simple-jobs-board-in-ruby-on-rails-even-if-youve-never-coded-before-9b296c4df483#.t46bd6ksg
